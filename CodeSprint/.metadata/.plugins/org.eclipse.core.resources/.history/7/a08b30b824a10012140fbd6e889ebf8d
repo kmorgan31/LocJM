@@ -1,0 +1,57 @@
+package com.example.hotellocator;
+
+import java.util.ArrayList;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Intent;
+import android.support.v4.app.ListFragment;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class SearchableActivity extends ListFragment{
+
+	Hotel[] hotels = {
+    		new Hotel("Hilton", "7 Hibiscus Drive", "Lorem ipsum", 1001),
+    		new Hotel("Four Seasons", "2A Shalimar Close", "Eureka", 1002),
+    		new Hotel("Holiday Inn", "83 Lore Lane", "Exciting", 1003),
+    		new Hotel("Grande Palladium", "3 Old Way", "Boring", 1004)
+    };
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	          Bundle savedInstanceState) {
+	  	
+	      	View rootView = inflater.inflate(R.layout.activity_search, container, false);
+		
+			Intent intent = new Intent();
+		    if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+		      String query = intent.getStringExtra(SearchManager.QUERY);
+		      ArrayList<String> hotelsFound = doMySearch(query);
+		    }
+	}
+
+	private ArrayList<String> doMySearch(String query) {
+		// TODO Auto-generated method stub
+		ArrayList<String> hotelNames = null;
+		for(int i=0;i<hotels.length;i++)
+		{
+			if(hotels[i].getHotelName().equals(query))
+			{
+				hotelNames.add(hotels[i].getHotelName());
+			}
+		}
+		return hotelNames;
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.search, menu);
+		return true;
+	}
+
+}

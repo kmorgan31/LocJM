@@ -1,0 +1,57 @@
+package com.example.hotellocator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class FeaturedFragment extends ListFragment {
+
+	TextView description;
+	TextView hotelName;
+	ListView hotelListView;
+	ArrayAdapter<String> listAdapter;
+	String[] hotels = new String[]{"Hilton","Four Seasons", "Holiday Inn", "Grande Palladium"};
+	
+	public FeaturedFragment(){
+	}
+	
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+          Bundle savedInstanceState) {
+  	
+      	View rootView = inflater.inflate(R.layout.activity_featured, container, false);
+      	hotelName = (TextView)rootView.findViewById(R.id.hotelName);
+		hotelName.setText("Pegasus");
+		description = (TextView)rootView.findViewById(R.id.hotelDescription);
+		description.setText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+		listAdapter = new ArrayAdapter<String>(getActivity(),
+		        android.R.layout.simple_list_item_1, hotels);
+		
+		setListAdapter(listAdapter);
+		
+		return rootView;
+	}
+		
+		@Override
+		public void onListItemClick(ListView l, View v, int position, long id) {
+				 //TODO Auto-generated method stub
+				 //Go to details of hotel
+				Intent myIntent = new Intent();
+				myIntent.setClass(getActivity(), DetailsFragment.class);
+				myIntent.putExtra("Hotel Name", hotels[position]);
+			    startActivity(myIntent);
+			}
+	}

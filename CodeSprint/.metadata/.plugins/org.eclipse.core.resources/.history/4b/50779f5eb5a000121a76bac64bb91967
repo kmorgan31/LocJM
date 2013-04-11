@@ -1,0 +1,68 @@
+package com.example.hotellocator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.support.v4.app.ListFragment;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class FeaturedFragment extends ListFragment {
+
+	TextView description;
+	TextView hotelName;
+	ListView hotelListView;
+	ArrayAdapter<String> listAdapter;
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_featured);
+		
+		hotelName = (TextView)findViewById(R.id.hotelName);
+		hotelName.setText("Pegasus");
+		description = (TextView)findViewById(R.id.hotelDescription);
+		description.setText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+		hotelListView = (ListView)findViewById(R.id.listView1);
+		
+		String[] hotels = new String[]{"Hilton","Four Seasons", "Holiday Inn", "Grande Palladium"};
+		ArrayList<String> hotelList = new ArrayList<String>();
+		for (int i = 0; i < hotels.length; ++i) {
+		      hotelList.add(hotels[i]);
+		    }
+		
+		listAdapter = new ArrayAdapter<String>(this, R.layout.activity_featured, hotelList);
+		
+		hotelListView.setAdapter(listAdapter);
+		
+		hotelListView.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// Go to details of hotel
+//				Intent myIntent = new Intent(SimpleListViewActivity.this, MainActivity.class);
+//			    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//			    myIntent.putExtra("pos", pos);
+//			    startActivity(myIntent);
+			}
+			
+		});
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.featured, menu);
+		return true;
+	}
+
+}

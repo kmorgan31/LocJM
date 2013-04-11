@@ -1,0 +1,102 @@
+package com.example.hotellocator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class FeaturedFragment extends Fragment {
+
+	TextView description;
+	TextView hotelName;
+	ListView hotelListView;
+	ArrayAdapter<String> listAdapter;
+	
+	public FeaturedFragment(){
+	}
+		
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+          Bundle savedInstanceState) {
+  	
+      	View rootView = inflater.inflate(R.layout.activity_featured, container, false);
+      	hotelName = (TextView)rootView.findViewById(R.id.hotelName);
+		hotelName.setText("Pegasus");
+		description = (TextView)rootView.findViewById(R.id.hotelDescription);
+		description.setText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+		hotelListView = (ListView)rootView.findViewById(R.id.listView1);
+		
+		String[] hotels = new String[]{"Hilton","Four Seasons", "Holiday Inn", "Grande Palladium"};
+		ArrayList<String> hotelList = new ArrayList<String>();
+		for (int i = 0; i < hotels.length; ++i) {
+		      hotelList.add(hotels[i]);
+		    }
+		
+		listAdapter = new ArrayAdapter<String>(getActivity(),
+		        android.R.layout.simple_list_item_1, hotelList);
+		
+		hotelListView.setAdapter(listAdapter);
+		
+		hotelListView.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// Go to details of hotel
+//					Intent myIntent = new Intent(SimpleListViewActivity.this, MainActivity.class);
+//				    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//				    myIntent.putExtra("pos", pos);
+//				    startActivity(myIntent);
+			}
+			
+		});
+		
+      	return rootView;
+
+	}
+
+	/**
+//     * A dummy fragment representing a section of the app, but that simply
+//     * displays dummy text.
+//     */
+//    public static class DummySectionFragment extends Fragment {
+//        /**
+//         * The fragment argument representing the section number for this
+//         * fragment.
+//         */
+//        public static final String ARG_SECTION_NUMBER = "section_number";
+//
+//        public DummySectionFragment() {
+//        }
+//
+//        @Override
+//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                Bundle savedInstanceState) {
+//        	
+//        	View rootView = null;
+//        	if(getArguments().getInt(ARG_SECTION_NUMBER)==1)
+//        	{
+//        		rootView = inflater.inflate(R.layout.activity_featured, container, false);
+//        		Intent intent = new Intent();
+//                intent.setClass(getActivity(), FeaturedFragment.class);
+//                startActivity(intent);
+////            	TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
+////            	dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+//        	}
+//        	return rootView;
+//        }
+//    }
+	
+}
