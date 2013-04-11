@@ -51,6 +51,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     		new Hotel("Grande Palladium", "3 Old Way", "Boring", 1004, new LatLng(18.002856, 45.795659), 2),
     		new Hotel("Riu", "Ocho Rios", "nice food", 1005, new LatLng(14.002856, -7.795659), 4)
     };
+    
+//    final Attraction[] attraction = {
+//    		new Attraction("Montego Bay", )
+//    }
+//    
+//    final Event[] events = {
+//    		
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,9 +105,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
-
         // Configure the search info and add any event listeners
         return super.onCreateOptionsMenu(menu);
     }
