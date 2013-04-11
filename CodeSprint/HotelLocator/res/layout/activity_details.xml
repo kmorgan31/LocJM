@@ -7,14 +7,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DetailsFragment" >
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/images" />
+    
+    
 
     <TextView
         android:id="@+id/hotelName"
@@ -24,7 +18,25 @@
         android:layout_marginTop="10dp"
         android:gravity = "center"
         android:textSize = "25sp"/>
+    
+    <TextView
+        android:id="@+id/hotelRating"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize ="12sp"
+        android:textColor="#CCC"
+        android:text="Rating"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <ImageView 
+        android:id="@+id/imageView1" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/hotelRating"
+        android:src="@drawable/images" />
+    
     <TextView
         android:id="@+id/hotelAddress"
         android:layout_width="match_parent"
@@ -42,6 +54,7 @@
         android:layout_below="@+id/hotelAddress"
         android:layout_marginTop="10dp"
         android:textSize = "15sp"
+        android:maxLength="140"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -53,5 +66,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Map" />
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mapButton"
+        android:layout_centerHorizontal="true"
+        android:stepSize="0.5" />
 
 </RelativeLayout>
