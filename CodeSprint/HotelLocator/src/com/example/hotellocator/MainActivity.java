@@ -7,6 +7,8 @@ import com.google.android.gms.maps.model.LatLng;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -95,7 +97,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        
         SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
+
         // Configure the search info and add any event listeners
         return super.onCreateOptionsMenu(menu);
     }
@@ -165,7 +169,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                     //return getString(R.string.title_section1).toUpperCase(l);
                     return "Home";
                 case 1:
-                    return "Search";
+                    return "All";
                 case 2:
                 	return "Map";
                 case 3:

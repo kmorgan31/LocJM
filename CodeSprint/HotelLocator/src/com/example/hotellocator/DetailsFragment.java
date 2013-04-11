@@ -37,10 +37,6 @@ public class DetailsFragment extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_details);
 		
-		//Hotel h = new Hotel("Hilton", "7 Hibiscus Drive", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 10001);
-//		Bundle hotelBundle = getIntent().getExtras();
-//		Hotel[] hotels = (Hotel[]) hotelBundle.getSerializable("Hotels");
-		
 		
 		int position = 0;
 		final String name = getIntent().getStringExtra("hotel name");
