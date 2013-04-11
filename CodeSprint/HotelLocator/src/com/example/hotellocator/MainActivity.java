@@ -2,6 +2,7 @@ package com.example.hotellocator;
 
 import java.util.Locale;
 
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 import android.app.ActionBar;
@@ -131,21 +132,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             // below) with the page number as its lone argument.
 
         	Fragment fragment = null;
-        	
-        	if(position==0)
-        	{
-        		fragment = new FeaturedFragment();
+        	switch(position){
+        		case 0: fragment = new FeaturedFragment();
+        				break;
+        		case 1:	fragment = new SearchFragment();
+        				break;
+        		case 2: fragment = new GoogleMapFragment();
+        				break;
+        		default:fragment = new DummySectionFragment();
+                	Bundle args = new Bundle();
+                	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+                	((Fragment) fragment).setArguments(args);
         	}
-        	else
-        		if(position==1)
-        			fragment = new SearchFragment();
-        	else{
-        		fragment = new DummySectionFragment();
-                Bundle args = new Bundle();
-                args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-                fragment.setArguments(args);
-        	}
-        	
         	//            
             return fragment;
         }

@@ -48,20 +48,18 @@ public class DetailsFragment extends Activity {
 		
 			
 		mapButton = (Button)findViewById(R.id.button1);
-//		mapButton.setOnClickListener(new OnClickListener(){
-//
-//
-//			@Override
-//			public void onClick(View arg0) {
-//				// TODO Auto-generated method stub
-//				//send LatLng at hotel
-//				Intent myIntent = new Intent(DetailsFragment.this,
-//						GoogleMapFragment.class).putExtra("latlng", hotels[position].getHotelCoordinates());
-//			    startActivity(myIntent);
-//				
-//			}
-//			
-//		});
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+			    startActivity(myIntent);
+				
+			}
+			
+		});
 		}
 	}
 

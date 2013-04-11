@@ -61,7 +61,6 @@ public class FeaturedFragment extends ListFragment {
 		
 		seeMore = (Button)rootView.findViewById(R.id.button1);
 		seeMore.setOnClickListener(new OnClickListener(){
-
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub

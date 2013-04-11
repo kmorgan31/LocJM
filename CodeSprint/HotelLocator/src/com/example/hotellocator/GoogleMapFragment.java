@@ -5,6 +5,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -17,8 +18,12 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class GoogleMapFragment extends Activity {
+public class GoogleMapFragment extends SupportMapFragment {
 
 	static LatLng origin = new LatLng(18.002856, -76.795659);
 	LatLng myPos;
@@ -31,15 +36,27 @@ public class GoogleMapFragment extends Activity {
 	Marker location;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_map);
+	public void onActivityCreated(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onActivityCreated(savedInstanceState);
+		
+	}
 
-		double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
-		LatLng LOCATION = new LatLng(d[0],d[1]);
+	@Override
+	public View onCreateView(LayoutInflater arg0, ViewGroup arg1, Bundle arg2) {
+		// TODO Auto-generated method stub
+		
+		return super.onCreateView(arg0, arg1, arg2);
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		//double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
+		//LatLng LOCATION = new LatLng(d[0],d[1]);
 
 		if (map == null) {
-			map = ((MapFragment) getFragmentManager()
+			map = ((SupportMapFragment) getFragmentManager()
 					.findFragmentById(R.id.map)).getMap();
 			map.setMyLocationEnabled(true);
 			map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
@@ -73,9 +90,6 @@ public class GoogleMapFragment extends Activity {
 		});
 	}
 
-	public GoogleMap getMap() {
-		return map;
-	}
 
 	LocationListener gpsListener = new LocationListener() {
 		public void onLocationChanged(Location loc) {
@@ -120,7 +134,7 @@ public class GoogleMapFragment extends Activity {
 		Location networkLocation = null;
 
 		if (locMan == null)
-			locMan = (LocationManager) getApplicationContext()
+			locMan = (LocationManager) getActivity()
 					.getSystemService(Context.LOCATION_SERVICE);
 		try {
 			if (locMan.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -156,10 +170,10 @@ public class GoogleMapFragment extends Activity {
 		return null;
 	}
 
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
-		finish();
-	}
+//	@Override
+//	protected void onPause() {
+//		// TODO Auto-generated method stub
+//		super.onPause();
+//		finish();
+//	}
 }

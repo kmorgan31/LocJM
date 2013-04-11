@@ -57,7 +57,7 @@
         -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyAH32DjtsI0Yo9h9A-nFZ_FaaAxiGbTq28" />
+            android:value="AIzaSyAhfZQdNMxxAn9477rU_85pJFQ7DxWzGXQ" />
 
         <activity
             android:name="com.example.hotellocator.SearchableActivity"
