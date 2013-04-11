@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FeaturedFragment extends ListFragment {
 
@@ -61,7 +62,6 @@ public class FeaturedFragment extends ListFragment {
 		
 		seeMore = (Button)rootView.findViewById(R.id.button1);
 		seeMore.setOnClickListener(new OnClickListener(){
-
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -78,6 +78,8 @@ public class FeaturedFragment extends ListFragment {
 		
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
+				Toast.makeText(getActivity(),featuredHotels[position+1].getHotelName(),
+					Toast.LENGTH_SHORT).show();
 				 //TODO Auto-generated method stub
 				 //Go to details of hotel
 				Intent myIntent = new Intent();
@@ -86,6 +88,7 @@ public class FeaturedFragment extends ListFragment {
 				myIntent.setClass(getActivity(), DetailsFragment.class);
 				//myIntent.putExtra("hotels", hotels);
 				myIntent.putExtra("hotel name", featuredHotels[position+1].getHotelName());
+				
 			    startActivity(myIntent);
 			}
 	}

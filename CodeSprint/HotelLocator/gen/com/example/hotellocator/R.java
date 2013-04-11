@@ -170,8 +170,7 @@ containing a value of this type.
         public static final int activity_main=0x7f030002;
         public static final int activity_map=0x7f030003;
         public static final int activity_searchable=0x7f030004;
-        public static final int activity_searchable_results=0x7f030005;
-        public static final int fragment_main_dummy=0x7f030006;
+        public static final int fragment_main_dummy=0x7f030005;
     }
     public static final class menu {
         public static final int details=0x7f080000;
@@ -249,6 +248,7 @@ containing a value of this type.
         public static final int menu_search=0x7f05001a;
         public static final int title_activity_details_fragment=0x7f050019;
         public static final int title_activity_featured=0x7f050016;
+        public static final int title_activity_map=0x7f05001c;
         public static final int title_activity_search=0x7f050018;
         public static final int title_activity_searchable=0x7f05001b;
         public static final int title_section1=0x7f050013;

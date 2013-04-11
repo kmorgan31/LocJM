@@ -22,6 +22,7 @@ public class DetailsFragment extends Activity {
 	TextView hotelRating;
 	Button mapButton;
 	RatingBar rbar;
+	int position = 0;
 	
 	final Hotel[] hotels = {
 			new Hotel("Pegasus", "7 Knutsford Boulevard", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 1000, new LatLng(25.002856, -76.795659), 5),
@@ -38,7 +39,6 @@ public class DetailsFragment extends Activity {
 		setContentView(R.layout.activity_details);
 		
 		
-		int position = 0;
 		final String name = getIntent().getStringExtra("hotel name");
 		for(int i=0;i<hotels.length;i++)
 		{
@@ -67,6 +67,17 @@ public class DetailsFragment extends Activity {
 			
 			//rbar initially user rating
 			
+		mapButton = (Button)findViewById(R.id.mapButton);
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+			    startActivity(myIntent);	
+			}
+		});
 //		mapButton.setOnClickListener(new OnClickListener(){
 //
 //
