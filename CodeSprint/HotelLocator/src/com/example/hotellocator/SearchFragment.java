@@ -40,4 +40,6 @@ public class SearchFragment extends ListFragment {
 			setListAdapter(listAdapter);
 	      	return rootView;
 	}
+	
+	
 }
