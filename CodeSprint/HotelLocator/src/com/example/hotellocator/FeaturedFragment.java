@@ -78,6 +78,8 @@ public class FeaturedFragment extends ListFragment {
 		
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
+				Toast.makeText(getActivity(),featuredHotels[position+1].getHotelName(),
+					Toast.LENGTH_SHORT).show();
 				 //TODO Auto-generated method stub
 				 //Go to details of hotel
 				Intent myIntent = new Intent();
@@ -86,8 +88,7 @@ public class FeaturedFragment extends ListFragment {
 				myIntent.setClass(getActivity(), DetailsFragment.class);
 				//myIntent.putExtra("hotels", hotels);
 				myIntent.putExtra("hotel name", featuredHotels[position+1].getHotelName());
-				Toast.makeText(getActivity(),featuredHotels[position+1].getHotelName(),
-						Toast.LENGTH_SHORT).show();
+				
 			    startActivity(myIntent);
 			}
 	}

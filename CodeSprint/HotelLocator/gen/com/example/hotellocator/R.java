@@ -247,6 +247,7 @@ containing a value of this type.
         public static final int menu_search=0x7f06001a;
         public static final int title_activity_details_fragment=0x7f060019;
         public static final int title_activity_featured=0x7f060016;
+        public static final int title_activity_map=0x7f06001c;
         public static final int title_activity_search=0x7f060018;
         public static final int title_activity_searchable=0x7f06001b;
         public static final int title_section1=0x7f060013;

@@ -71,7 +71,7 @@ public class DetailsFragment extends Activity {
 			
 			//rbar initially user rating
 			
-		mapButton = (Button)findViewById(R.id.button1);
+		mapButton = (Button)findViewById(R.id.mapButton);
 		mapButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -79,10 +79,8 @@ public class DetailsFragment extends Activity {
 				//send LatLng at hotel
 				Intent myIntent = new Intent(DetailsFragment.this,
 						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
-			    startActivity(myIntent);
-				
+			    startActivity(myIntent);	
 			}
-			
 		});
 //		mapButton.setOnClickListener(new OnClickListener(){
 //

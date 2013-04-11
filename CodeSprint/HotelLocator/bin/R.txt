@@ -69,6 +69,7 @@ int string hello_world 0x7f060017
 int string menu_search 0x7f06001a
 int string title_activity_details_fragment 0x7f060019
 int string title_activity_featured 0x7f060016
+int string title_activity_map 0x7f06001c
 int string title_activity_search 0x7f060018
 int string title_activity_searchable 0x7f06001b
 int string title_section1 0x7f060013

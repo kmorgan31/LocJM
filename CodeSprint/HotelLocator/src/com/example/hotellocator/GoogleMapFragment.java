@@ -19,6 +19,8 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,29 +37,11 @@ public class GoogleMapFragment extends SupportMapFragment {
 	GoogleMapOptions option = new GoogleMapOptions();
 	Marker location;
 
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onActivityCreated(savedInstanceState);
-		
-	}
-
-	@Override
 	public View onCreateView(LayoutInflater arg0, ViewGroup arg1, Bundle arg2) {
 		// TODO Auto-generated method stub
-		
-		return super.onCreateView(arg0, arg1, arg2);
-	}
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		//double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
-		//LatLng LOCATION = new LatLng(d[0],d[1]);
-
+		View rootView = arg0.inflate(R.layout.activity_map, arg1, false);
 		if (map == null) {
-			map = ((SupportMapFragment) getFragmentManager()
-					.findFragmentById(R.id.map)).getMap();
+			map = ((SupportMapFragment)(getFragmentManager().findFragmentById(R.id.map))).getMap();
 			map.setMyLocationEnabled(true);
 			map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 			myLoc = getBestLocation();
@@ -88,6 +72,46 @@ public class GoogleMapFragment extends SupportMapFragment {
 				return false;
 			}
 		});
+		return rootView;
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		//double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
+		//LatLng LOCATION = new LatLng(d[0],d[1]);
+//		if (map == null) {
+//			map = ((SupportMapFragment)(getFragmentManager().findFragmentById(R.id.map))).getMap();
+//			map.setMyLocationEnabled(true);
+//			map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+//			myLoc = getBestLocation();
+//			myPos = new LatLng(myLoc.getLatitude(), myLoc.getLongitude());
+//			map.moveCamera(CameraUpdateFactory.newLatLngZoom(myPos, 16));
+//			option.zoomControlsEnabled(true);
+//		}
+//		if (map != null) {
+//			location = map.addMarker(new MarkerOptions().position(origin)
+//					.title("Delivery")
+//					// .snippet("Kiel is cool")
+//					.icon(BitmapDescriptorFactory
+//							.fromResource(R.drawable.ic_launcher)));
+//		}
+//		map.setOnMarkerClickListener(new OnMarkerClickListener() {
+//			@Override
+//			public boolean onMarkerClick(Marker arg0) {
+//				// TODO Auto-generated method stub
+//				// go to details page
+////				try {
+////					String s = getIntent().getStringExtra("delivery info");
+////					Intent chosenLayout = new Intent(GoogleMapActivity.this,
+////							LoginActivity.class).putExtra("delivery info", s);
+////					startActivity(chosenLayout);
+////				} catch (NullPointerException e) {
+////					e.printStackTrace();
+////				}
+//				return false;
+//			}
+//		});
 	}
 
 
@@ -170,10 +194,9 @@ public class GoogleMapFragment extends SupportMapFragment {
 		return null;
 	}
 
-//	@Override
-//	protected void onPause() {
-//		// TODO Auto-generated method stub
-//		super.onPause();
-//		finish();
-//	}
+	@Override
+	public void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
 }
