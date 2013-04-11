@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 public class SearchableActivity extends ListActivity {
 
@@ -25,34 +28,23 @@ public class SearchableActivity extends ListActivity {
     		new Hotel("Riu", "Ocho Rios", "nice food", 1005, new LatLng(14.002856, -7.795659), 4)
     };
 	ArrayAdapter<String> listAdapter;
+	ArrayList<String> foundHotels;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_searchable);
+		setContentView(R.layout.activity_searchable_results);
 		
-		Intent intent = getIntent();
-	    if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-	      String query = intent.getStringExtra(SearchManager.QUERY);
-	      doMySearch(query);
-	    }
-	}
+		foundHotels = getIntent().getStringArrayListExtra("hotel names");
+		
+			listAdapter = new ArrayAdapter<String>(this,
+			        android.R.layout.simple_list_item_1, foundHotels);
+			
+			setListAdapter(listAdapter);
 
-	    
-	public void doMySearch(String query){
-		ArrayList<String> foundHotels = new ArrayList<String>();
-		ArrayList<Integer> positions = new ArrayList<Integer>();
-		for (int i=0;i<hotels.length;i++){
-			if(hotels[i].getHotelName().equals(query)){
-				foundHotels.add(hotels[i].getHotelName());
-				positions.add(i);
-			}
-		}
-		
-		Intent myIntent = new Intent();
-		myIntent.setClass(this, SearchFragment.class);
-		myIntent.putExtra("hotel positions", positions);
-	    startActivity(myIntent);
+//		Intent myIntent = new Intent();
+//		myIntent.setClass(this, SearchFragment.class);
+//		startActivity(myIntent);
 	    
 //		listAdapter = new ArrayAdapter<String>(this,
 //		        android.R.layout.simple_list_item_1, foundHotels);
@@ -66,9 +58,11 @@ public class SearchableActivity extends ListActivity {
 			 //Go to details of hotel
 			Intent myIntent = new Intent();
 			myIntent.setClass(this, DetailsFragment.class);
-			myIntent.putExtra("hotel position", position);
+			myIntent.putExtra("hotel name", foundHotels.get(position));
 		    startActivity(myIntent);
 		}
+	
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
