@@ -1,0 +1,17 @@
+#logo{
+	height:50px;
+	width:50px;	
+	text-align:center;
+}
+
+#map-canvas { 
+	height: 500px; 
+	width:50%;	
+	float:left;  
+}
+
+#topuserhotels, #topparish{
+	float:left;
+	display:block;
+	width:22%;
+}
