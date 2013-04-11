@@ -53,8 +53,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     };
     
 //    final Attraction[] attraction = {
+//    		new Attraction("Montego Bay", "Xayamaca", "Mr. Paul Hastings", "Dalton Hastings" ),
 //    		new Attraction("Montego Bay", )
-//    }
+//    };
 //    
 //    final Event[] events = {
 //    		
