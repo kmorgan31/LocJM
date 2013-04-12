@@ -1,0 +1,235 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	  <meta name=viewport content="user-scalable=no,width=device-width" />
+	  <link rel=stylesheet href=jquery.mobile-1.0.1/jquery.mobile-1.0.1.css />
+      <link rel=stylesheet href=style.css />
+      
+      <meta property="og:title" content="SlidesJS, a simple slideshow plugin for jQuery">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="http://www.slidesjs.com">
+      <meta property="og:image" content="http://slidesjs.com/img/slidesjs-black.png">
+      <meta property="og:site_name" content="SlidesJS, a simple slideshow plugin for jQuery">
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <!-- End CSS -->
+      
+	  <script src=jquery.js></script>
+	  <script src=jquery.mobile-1.0.1/jquery.mobile-1.0.1.js></script>
+	  
+	  <style type=text/css>
+		.odd {
+		  background-color : black;
+		  color : white;
+		  text-align : center;
+		  height : 30px;
+		  padding-top : 5px;
+		}
+		.even {
+		  background-color : blue;
+		  color : white;
+		  text-align : center;
+		  height : 30px;
+		  padding-top : 5px;
+		}
+	  </style>
+      
+      <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBcWf8zNmLOegm4amS1k-_N_GKNK7k-Qs&sensor=true">
+      </script>
+      
+	  <script type="text/javascript">
+         function initialize() {
+           var mapOptions = {
+             center: new google.maps.LatLng(-34.397, 150.644),
+             zoom: 8,
+             mapTypeId: google.maps.MapTypeId.ROADMAP
+           };
+           var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+      	 }
+         google.maps.event.addDomListener(window, 'load', initialize);
+       </script>
+      	
+	</head> 
+
+	<body> 
+
+		<div data-role=page id=home>
+        	<!-- HEADER -->
+			 <div data-role=header data-position=fixed>
+                <h1> <img id="logo" src="img/logo.png"/> Supporting System </h1>
+				 <div data-role=navbar>
+                      <ul>
+                        <li><a href=#home>Home</a></li>
+                        <li><a href=#recommendation>Recommendations</a></li>
+                        <li><a href=#message>Message Board</a></li>
+                      </ul>
+				</div>
+			</div>
+			
+            <!-- CONTENT -->
+            <!--<div data-role=content>
+            	<div id="map-canvas"> </div>        
+            </div>-->
+            
+            <div data-role=content id="map-canvas">
+            </div>
+            
+            <div data-role=content>
+            	<p>
+                	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit fermentum massa eu tempus. Aenean pretium rutrum tortor, id rutrum elit sagittis id. Nullam et metus et diam bibendum vestibulum. Nullam molestie pulvinar arcu, at convallis dolor lobortis et. Suspendisse vel tortor non velit eleifend scelerisque. Nam a mi quis diam euismod varius at eu purus. Mauris a diam eu lacus bibendum vulputate at ut ligula. Integer vulputate malesuada pulvinar. Ut posuere eleifend ligula, eu tincidunt enim scelerisque vitae.
+                </p>
+            </div>
+            
+            <div data-role=content id="topuserhotels">
+            	<ul data-role=listview data-filter=false data-inset=true>
+                	<li data-role=list-divider> Top User Rated Hotels </li>
+                	<li> <a href=#hotelpage> Item 1 </a></li>
+                    <li> <a href=#hotelpage> Item 2 </a></li>
+                    <li> <a href=#hotelpage> Item 3 </a></li>
+                    <li> <a href=#hotelpage> Item 4 </a></li>
+                    <li> <a href=#hotelpage> Item 5 </a></li>
+                    
+                </ul>   
+            </div>
+            
+            <div data-role=content id="topparish">
+            	<ul data-role=listview data-filter=false data-inset=true>
+                	<li data-role=list-divider> Highest Revenue Parishes </li>
+                	<li> <a href=#hotelpage> Item 1 </a></li>
+                    <li> <a href=#hotelpage> Item 2 </a></li>
+                    <li> <a href=#hotelpage> Item 3 </a></li>
+                    <li> <a href=#hotelpage> Item 4 </a></li>
+                    <li> <a href=#hotelpage> Item 5 </a></li>
+                </ul>   
+            </div>
+            
+            <!-- FOOTER -->
+            <div data-role=footer>
+				<h4> &copy UWI 	2013 </h4>
+            </div> 
+	</div>
+    
+    <div data-role=page id=recommendation>
+        	<!-- HEADER -->
+			 <div data-role=header data-position=fixed>
+                <h1> <img id="logo" src="img/logo.png"/> Supporting System </h1>
+				 <div data-role=navbar>
+                      <ul>
+                        <li><a href=#home>Home</a></li>
+                        <li><a href=#recommendation>Recommendations</a></li>
+                        <li><a href=#message>Message Board</a></li>
+                      </ul>
+				</div>
+			</div>
+			
+            <!-- CONTENT -->
+            <div data-role=content>
+            	<!--  Start SlidesJS -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="span12">
+                        <div id="slides-section" class="section">
+                            <div id="slides">
+                              <img src="img/example-slide-350-1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+                              <img src="img/example-slide-350-2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+                              <img src="img/example-slide-350-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+                              <img src="img/example-slide-350-4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+                              <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+                              <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  End SlidesJS -->
+                
+                  <!-- SlidesJS Required: Link to jQuery -->
+                  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+                  <!-- End SlidesJS Required -->
+                
+                  <!-- JavaScript -->
+                  <script src="js/plugins.js"></script>
+                  <script src="js/bootstrap.js"></script>
+                  <script src="js/script.js"></script>
+                  <script src="https://spacebox.io/embed/js/embed-v1.js"></script>
+                  <!-- End JavaScript -->
+                
+                  <!-- Highlight.js -->
+                  <script>
+                    hljs.tabReplace = '  ';
+                    hljs.initHighlightingOnLoad();
+                  </script>
+                  <!-- End Highlight.js -->
+                
+                  <!-- SlidesJS Required: Link to jquery.slides.js -->
+                  <script src="js/jquery.slides.min.js"></script>
+                  <!-- End SlidesJS Required -->
+                
+                  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+                  <script>
+                    $(function() {
+                      $('#slides').slidesjs({
+                        width: 940,
+                        height: 350,
+                        navigation: false
+                      });
+                    });
+                  </script>
+                  <!-- End SlidesJS Required -->       
+            </div>
+            
+            
+            <!-- FOOTER -->
+            <div data-role=footer>
+				<h4> &copy UWI 	2013 </h4>
+            </div> 
+		</div>
+        
+        
+            <div data-role=page id=message>
+        	<!-- HEADER -->
+			 <div data-role=header data-position=fixed>
+                <h1> <img id="logo" src="img/logo.png"/> Supporting System </h1>
+				 <div data-role=navbar>
+                      <ul>
+                        <li><a href=#home>Home</a></li>
+                        <li><a href=#recommendation>Recommendations</a></li>
+                        <li><a href=#message>Message Board</a></li>
+                      </ul>
+				</div>
+			</div>
+			
+            <!-- CONTENT -->
+            <div data-role=content>
+            	<div id="whiteboard">
+					<div data-role=content data-theme=c>
+										<br />
+										<span> First Name </span>
+										<input id="first_name" name="first_name" type=text >
+										<br />
+										<span> Last Name </span>
+										<input id="last_name" name="last_name" type=text >
+										<br />
+										<span> Email Address </span>
+										<input id="email_address" name="email_address" type=text>							
+										<br />							
+										<a href=#win1><input name="myBtn" type="submit" value="Go" onClick="javascript:ajax_postMailingList();"></a>
+										<!--
+										<a href=#win1 data-role = button id="submitButton" data-transition=pop> Go </a>
+										-->
+									</div>
+                </div>
+            </div>
+            
+            
+            <!-- FOOTER -->
+            <div data-role=footer>
+				<h4> &copy UWI 	2013 </h4>
+            </div> 
+		</div>
+    </body>
+</html>

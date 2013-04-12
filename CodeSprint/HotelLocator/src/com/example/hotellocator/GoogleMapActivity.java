@@ -4,7 +4,10 @@ package com.example.hotellocator;
 
 import java.io.IOException;
 import java.util.List;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMapOptions;
@@ -28,6 +31,10 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
 
 public class GoogleMapActivity extends Activity {
 
@@ -37,10 +44,16 @@ public class GoogleMapActivity extends Activity {
 	private LocationManager locMan;
 	boolean locChange;
 	Location curLoc, myLoc;
+<<<<<<< HEAD
 	List<Address> address;
 	LatLng result;
 	String search;
 
+=======
+	List <Address> address;
+	LatLng result;
+	
+>>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
 	GoogleMapOptions option = new GoogleMapOptions();
 	Marker location;
 
@@ -90,6 +103,7 @@ public class GoogleMapActivity extends Activity {
 		return map;
 	}
 
+<<<<<<< HEAD
 	public void searchMap(String addr) {
 		Geocoder coder = new Geocoder(this);
 
@@ -108,9 +122,37 @@ public class GoogleMapActivity extends Activity {
 				Toast.makeText(GoogleMapActivity.this, "Location not found",
 						Toast.LENGTH_SHORT);
 			}
+=======
+	
+	public void searchMap(String addr){
+	Geocoder coder = new Geocoder(this);
+
+	try {
+	    address = coder.getFromLocationName(addr,5);
+	    Address location = address.get(0);
+	    location.getLatitude();
+	    location.getLongitude();
+
+	    result = new LatLng((int) (location.getLatitude() * 1E6),
+	                      (int) (location.getLongitude() * 1E6));
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally{
+		if (address != null) {
+			map.addMarker(new MarkerOptions().position(result));
+	    	}
+		else{
+			Toast.makeText(GoogleMapActivity.this,"Location not found", Toast.LENGTH_SHORT);
+>>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
 		}
 
 	}
+<<<<<<< HEAD
+=======
+	
+}
+>>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
 
 	LocationListener gpsListener = new LocationListener() {
 		public void onLocationChanged(Location loc) {

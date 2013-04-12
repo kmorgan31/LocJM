@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="org.json.JSONObject"/>
 <fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
@@ -14,4 +15,13 @@
 <fullyQualifiedTypeName name="java.util.zip.Inflater"/>
 <fullyQualifiedTypeName name="android.widget.ExpandableListView"/>
 <fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
+=======
+<fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.view.ViewGroup"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+>>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
 </qualifiedTypeNameHistroy>

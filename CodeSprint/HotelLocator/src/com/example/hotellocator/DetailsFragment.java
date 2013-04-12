@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class DetailsFragment extends Activity {
 
-	String name;
+	String name,type;
 	TextView featureName;
 	TextView description;
 	TextView address;
@@ -48,8 +48,9 @@ public class DetailsFragment extends Activity {
 		setContentView(R.layout.activity_details);
 		
 		
-		name = getIntent().getStringExtra("hotel");
-		if(name!=null){
+		type = getIntent().getStringExtra("type");
+		name = getIntent().getStringExtra("name");
+		if(type.equals("hotel")){
 			for(int i=0;i<hotels.length;i++)
 			{
 				if(hotels[i].getHotelName().equals(name))
@@ -60,6 +61,7 @@ public class DetailsFragment extends Activity {
 			}
 		}
 		else{
+			System.out.println(type);
 			for(int i=0;i<attractions.length;i++)
 			{
 				if(attractions[i].getName().equals(name))
@@ -79,7 +81,7 @@ public class DetailsFragment extends Activity {
 			rbar = (RatingBar) findViewById(R.id.ratingBar1);
 			themes = (TextView)findViewById(R.id.themes);
 			
-			if(name.equals("hotel"))
+			if(type.equals("hotel"))
 			{
 				featureName.setText(hotels[position].getHotelName());
 				description.setText(hotels[position].getDescription());
@@ -88,18 +90,19 @@ public class DetailsFragment extends Activity {
 				rbar.setRating(hotels[position].getAverageUserRating());
 			}
 			else
-			{
-				featureName.setText(attractions[position].getName());
-				description.setText(attractions[position].getDescription());
-				address.setText(attractions[position].getAddress());
-				String s = "";
-    			for(int i=0;i<attractions[position].getThemes().length;i++)
-    			{
-    				s = s + attractions[position].getThemes()[0] + "\n";
-    			}
-    			themes.setText(s);
-				rbar.setRating(0);
-			}
+				if(type.equals("attraction")){
+					featureName.setText(attractions[position].getName());
+					description.setText(attractions[position].getDescription());
+					address.setText(attractions[position].getAddress());
+					String s = "";
+					if(attractions[position].getThemes()!=null){
+	    			for(int i=0;i<attractions[position].getThemes().length;i++)
+	    			{
+	    				s = s + attractions[position].getThemes()[i] + "\n";
+	    			}
+	    			themes.setText(s);}
+					rbar.setRating(0);
+			}}
 			
 			mapButton = (Button)findViewById(R.id.button1);
 			addListenerOnRatingBar(position);
@@ -132,7 +135,7 @@ public class DetailsFragment extends Activity {
 //			
 //		});
 		}
-	}
+	
 	
 	public void addListenerOnRatingBar(final int position) {
 		 

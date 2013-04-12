@@ -19,8 +19,8 @@ import android.widget.TextView;
 public class HomeFragment extends Fragment {
 
 	TextView hotelName, hotelDescription, attractionName, attractionDescription, attractionThemes;
-	Button hotelButton, attractionButton;
-	String s;
+	Button hotelButton, attractionButton, nearMeButton;
+	String s ="";
 	
 	final Hotel[] featuredHotels = {
 			new Hotel("Pegasus", "7 Knutsford Boulevard", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 1000, new LatLng(25.002856, -76.795659), 5),
@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment {
 		hotelDescription.setText(featuredHotels[0].getDescription());
 		hotelButton = (Button)rootView.findViewById(R.id.hotelButton);
 		attractionButton = (Button)rootView.findViewById(R.id.attractionButton);
+		nearMeButton = (Button)rootView.findViewById(R.id.nearMe);
 		
 		attractionName = (TextView)rootView.findViewById(R.id.attractionName);
 		attractionName.setText(featuredAttractions[0].getName());
@@ -55,7 +56,7 @@ public class HomeFragment extends Fragment {
 		attractionThemes = (TextView)rootView.findViewById(R.id.attractionThemes);
 		for(int i=0;i<featuredAttractions[0].getThemes().length;i++)
 		{
-			s = s + featuredAttractions[0].getThemes()[0] + "\n";
+			s = s + featuredAttractions[0].getThemes()[i] + "\n";
 		}
 		attractionThemes.setText(s);
 		
@@ -65,7 +66,7 @@ public class HomeFragment extends Fragment {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
 				myIntent.setClass(getActivity(), FeaturedFragment.class);
-				myIntent.putExtra("list", "hotel");
+				myIntent.putExtra("type", "hotel");
 			    startActivity(myIntent);
 			}
 			
@@ -76,9 +77,20 @@ public class HomeFragment extends Fragment {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
-				myIntent.setClass(getActivity(), DetailsFragment.class);
-				myIntent.putExtra("list", "attraction");
+				myIntent.setClass(getActivity(), FeaturedFragment.class);
+				myIntent.putExtra("type", "attraction");
 			    startActivity(myIntent);
+			}
+			
+		});
+		
+		nearMeButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent myIntent = new Intent();
+				myIntent.setClass(getActivity(), GoogleMapActivity.class);
+				startActivity(myIntent);
 			}
 			
 		});

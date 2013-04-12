@@ -27,18 +27,24 @@ public class SearchableActivity extends ListActivity {
     		new Hotel("Grande Palladium", "3 Old Way", "Boring", 1004, new LatLng(18.002856, 45.795659), 2),
     		new Hotel("Riu", "Ocho Rios", "nice food", 1005, new LatLng(14.002856, -7.795659), 4)
     };
+	final Attraction[] attractions = {
+    		new Attraction("Xayamaca", "fun","Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
+    		new Attraction("White River Valley", "boring", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
+    		new Attraction("Veronica Park", "nice food", "Montego Bay", "Mr. Brasco Lee", "Michael Lee Chin", "Allsides District", "Waita Bit P.O.", "Trelawney", new String[]{"538-8940", "468-9449"}, null),
+    		new Attraction("Two Sister's Cave", "scary", "Kingston", "UCD", "Mrs. Winsome Roache", "Hellshire", null, "St. Catherine", null, new String[]{"Arawak Cave"} )
+    };
 	ArrayAdapter<String> listAdapter;
-	ArrayList<String> foundHotels;
+	ArrayList<String> found;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_searchable_results);
 		
-		foundHotels = getIntent().getStringArrayListExtra("hotel names");
+		found = getIntent().getStringArrayListExtra("names");
 		
 			listAdapter = new ArrayAdapter<String>(this,
-			        android.R.layout.simple_list_item_1, foundHotels);
+			        android.R.layout.simple_list_item_1, found);
 			
 			setListAdapter(listAdapter);
 
@@ -56,9 +62,30 @@ public class SearchableActivity extends ListActivity {
 	public void onListItemClick(ListView l, View v, int position, long id) {
 			 //TODO Auto-generated method stub
 			 //Go to details of hotel
+			String type = null;
+			boolean typeFound=false;
+			for(int i=0;i<hotels.length;i++)
+			{
+				if(hotels[i].getHotelName().equals(found.get(position)))
+				{
+					type="hotel";
+					typeFound=true;
+					break;
+				}
+			}
+			if(typeFound==false){
+			for(int i=0;i<attractions.length;i++)
+			{
+				if(attractions[i].getName().equals(found.get(position)))
+				{
+					type="attraction";
+					break;
+				}
+			}}
 			Intent myIntent = new Intent();
 			myIntent.setClass(this, DetailsFragment.class);
-			myIntent.putExtra("hotel name", foundHotels.get(position));
+			myIntent.putExtra("name", found.get(position));
+			myIntent.putExtra("type", type);
 		    startActivity(myIntent);
 		}
 	
