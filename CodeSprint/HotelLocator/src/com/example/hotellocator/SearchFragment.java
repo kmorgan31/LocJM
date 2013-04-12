@@ -61,6 +61,9 @@ public class SearchFragment extends ListFragment {
 	      	return rootView;
 	}
 	
+<<<<<<< HEAD
+	
+=======
 	protected void searchHotels(String query) {
 		// TODO Auto-generated method stub
 		ArrayList<String> foundHotels = new ArrayList<String>();
@@ -86,4 +89,5 @@ public class SearchFragment extends ListFragment {
 			myIntent.putExtra("hotel name", hotels[position].getHotelName());
 		    startActivity(myIntent);
 		}
+>>>>>>> 6e10efbd5da4c2c3cf33624dd9ac1eb510557308
 }

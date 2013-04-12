@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+		<item value="363" key="DIALOG_X_ORIGIN"/>
+=======
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="1440" key="dialogWidth"/>
 		<item value="767" key="dialogHeight"/>
@@ -11,6 +16,7 @@
 		</list>
 		<list key="textEntries">
 		</list>
+>>>>>>> 6e10efbd5da4c2c3cf33624dd9ac1eb510557308
 	</section>
 	<section name="NewWizardAction">
 		<item value="com.android.ide.eclipse.editors.wizards.NewActivityWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
