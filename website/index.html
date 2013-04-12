@@ -205,7 +205,24 @@
 			
             <!-- CONTENT -->
             <div data-role=content>
-            	<img id="whiteboard" src="http://snowmassgroups.com/images/whiteboard.png"/>
+            	<div id="whiteboard">
+					<div data-role=content data-theme=c>
+										<br />
+										<span> First Name </span>
+										<input id="first_name" name="first_name" type=text >
+										<br />
+										<span> Last Name </span>
+										<input id="last_name" name="last_name" type=text >
+										<br />
+										<span> Email Address </span>
+										<input id="email_address" name="email_address" type=text>							
+										<br />							
+										<a href=#win1><input name="myBtn" type="submit" value="Go" onClick="javascript:ajax_postMailingList();"></a>
+										<!--
+										<a href=#win1 data-role = button id="submitButton" data-transition=pop> Go </a>
+										-->
+									</div>
+                </div>
             </div>
             
             

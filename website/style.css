@@ -17,4 +17,7 @@
 }
 
 #whiteboard{
+	background:url('img/whiteboard.png') no-repeat;
+	height:500px;
+	margin:auto;
 }
