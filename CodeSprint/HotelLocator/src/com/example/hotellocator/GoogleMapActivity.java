@@ -1,9 +1,12 @@
 package com.example.hotellocator;
+<<<<<<< HEAD
 //
 ////import java.util.List;
 //
 //import java.io.IOException;
 //import java.util.List;
+=======
+>>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
 
 import java.io.IOException;
 import java.util.List;
@@ -49,12 +52,20 @@ public class GoogleMapActivity extends Activity {
 		myLoc = getBestLocation();
 		myPos = new LatLng(myLoc.getLatitude(), myLoc.getLongitude());
 		Bundle b = getIntent().getExtras();
+		try{
 			if (b.getDoubleArray("latlng") != null)
 			{
 				result = new LatLng((double) b.getDoubleArray("latlng")[0],(double) b.getDoubleArray("latlng")[1]);
 			}
-			if (b.getString("search") != null) {
+		}catch(NullPointerException e){
+			e.printStackTrace();
+		}
+			try{
+				if (b.getString("search") != null) {
 				searchMap(b.getString("search"));
+				}
+			}catch(NullPointerException e){
+					e.printStackTrace();
 			}
 			if (map == null) {
 				map = ((MapFragment) getFragmentManager().findFragmentById(
@@ -201,6 +212,7 @@ public class GoogleMapActivity extends Activity {
 		finish();
 	}
 }
+<<<<<<< HEAD
 
 //
 //import com.google.android.gms.maps.GoogleMap;
@@ -390,3 +402,5 @@ public class GoogleMapActivity extends Activity {
 //		finish();
 //	}
 //}
+=======
+>>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c

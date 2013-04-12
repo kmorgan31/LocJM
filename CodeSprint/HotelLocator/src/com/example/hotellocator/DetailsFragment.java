@@ -135,6 +135,7 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
+<<<<<<< HEAD
 //		mapButton.setOnClickListener(new OnClickListener(){
 //			@Override
 //			public void onClick(View arg0) {
@@ -145,6 +146,18 @@ public class DetailsFragment extends Activity {
 //			    startActivity(myIntent);	
 //			}
 //		});
+=======
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+			    startActivity(myIntent);	
+			}
+		});
+>>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
 		
 		callButton.setOnClickListener(new OnClickListener(){
 			
