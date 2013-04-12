@@ -93,11 +93,13 @@ public class FeaturedFragment extends ListActivity {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
 				myIntent.setClass(FeaturedFragment.this, DetailsFragment.class);
-				if(list.equals("hotel"))
+				if(list.equals("hotel")){
 					myIntent.putExtra("hotel", featuredHotels[0].getHotelName());
+					myIntent.putExtra("type", "hotel");}
 				else
-					if(list.equals("hotel"))
+					if(list.equals("attraction")){
 						myIntent.putExtra("attraction", featuredAttractions[0].getName());
+						myIntent.putExtra("type", "attraction");}
 			    startActivity(myIntent);
 			}
 			
@@ -110,11 +112,13 @@ public class FeaturedFragment extends ListActivity {
 				 //Go to details of hotel
 				Intent myIntent = new Intent();
 				myIntent.setClass(this, DetailsFragment.class);
-				if(list.equals("hotel"))
+				if(list.equals("hotel")){
 					myIntent.putExtra("hotel", featuredHotels[position+1].getHotelName());
+					myIntent.putExtra("type", "hotel");}
 				else
-					if(list.equals("attraction"))
+					if(list.equals("attraction")){
 						myIntent.putExtra("attraction", featuredAttractions[position+1].getName());
+						myIntent.putExtra("type", "attraction");}
 				
 			    startActivity(myIntent);
 			}

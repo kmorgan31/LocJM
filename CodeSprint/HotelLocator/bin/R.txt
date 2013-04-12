@@ -52,20 +52,12 @@ int id textView1 0x7f04001e
 int id themes 0x7f04000a
 int layout activity_details 0x7f030000
 int layout activity_featured 0x7f030001
-<<<<<<< HEAD
-int layout activity_main 0x7f030002
-int layout activity_map 0x7f030003
-int layout activity_searchable 0x7f030004
-int layout activity_searchable_results 0x7f030005
-int layout fragment_main_dummy 0x7f030006
-=======
 int layout activity_home 0x7f030002
 int layout activity_main 0x7f030003
 int layout activity_map 0x7f030004
 int layout activity_searchable 0x7f030005
 int layout activity_searchable_results 0x7f030006
 int layout fragment_main_dummy 0x7f030007
->>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 int menu details 0x7f080000
 int menu featured 0x7f080001
 int menu home 0x7f080002

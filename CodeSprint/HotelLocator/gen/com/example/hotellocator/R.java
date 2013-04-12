@@ -181,20 +181,12 @@ containing a value of this type.
     public static final class layout {
         public static final int activity_details=0x7f030000;
         public static final int activity_featured=0x7f030001;
-<<<<<<< HEAD
-        public static final int activity_main=0x7f030002;
-        public static final int activity_map=0x7f030003;
-        public static final int activity_searchable=0x7f030004;
-        public static final int activity_searchable_results=0x7f030005;
-        public static final int fragment_main_dummy=0x7f030006;
-=======
         public static final int activity_home=0x7f030002;
         public static final int activity_main=0x7f030003;
         public static final int activity_map=0x7f030004;
         public static final int activity_searchable=0x7f030005;
         public static final int activity_searchable_results=0x7f030006;
         public static final int fragment_main_dummy=0x7f030007;
->>>>>>> 26085e972714e31cf4af561dc450654225960ea6
     }
     public static final class menu {
         public static final int details=0x7f080000;

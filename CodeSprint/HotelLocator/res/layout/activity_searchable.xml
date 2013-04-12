@@ -14,8 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@+id/searchButton"
         android:ems="15" >
-
-        <requestFocus />
     </EditText>
 
     <ImageButton

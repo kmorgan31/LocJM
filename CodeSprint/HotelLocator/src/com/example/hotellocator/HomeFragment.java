@@ -20,7 +20,7 @@ public class HomeFragment extends Fragment {
 
 	TextView hotelName, hotelDescription, attractionName, attractionDescription, attractionThemes;
 	Button hotelButton, attractionButton;
-	String s;
+	String s ="";
 	
 	final Hotel[] featuredHotels = {
 			new Hotel("Pegasus", "7 Knutsford Boulevard", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 1000, new LatLng(25.002856, -76.795659), 5),
@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
 		attractionThemes = (TextView)rootView.findViewById(R.id.attractionThemes);
 		for(int i=0;i<featuredAttractions[0].getThemes().length;i++)
 		{
-			s = s + featuredAttractions[0].getThemes()[0] + "\n";
+			s = s + featuredAttractions[0].getThemes()[i] + "\n";
 		}
 		attractionThemes.setText(s);
 		
@@ -76,7 +76,7 @@ public class HomeFragment extends Fragment {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
-				myIntent.setClass(getActivity(), DetailsFragment.class);
+				myIntent.setClass(getActivity(), FeaturedFragment.class);
 				myIntent.putExtra("list", "attraction");
 			    startActivity(myIntent);
 			}
