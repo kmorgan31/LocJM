@@ -112,7 +112,6 @@ public class DetailsFragment extends Activity {
 			//rbar initially user rating
 			
 		mapButton = (Button)findViewById(R.id.mapButton);
-<<<<<<< HEAD
 		mapButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -126,18 +125,16 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
-=======
->>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
-//		mapButton.setOnClickListener(new OnClickListener(){
-//			@Override
-//			public void onClick(View arg0) {
-//				// TODO Auto-generated method stub
-//				//send LatLng at hotel
-//				Intent myIntent = new Intent(DetailsFragment.this,
-//						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
-//			    startActivity(myIntent);	
-//			}
-//		});
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+			    startActivity(myIntent);	
+			}
+		});
 		
 		callButton.setOnClickListener(new OnClickListener(){
 			
@@ -146,7 +143,7 @@ public class DetailsFragment extends Activity {
 				// TODO Auto-generated method stub
 				//send LatLng at hotel
 				Intent callIntent = new Intent(Intent.ACTION_CALL);
-				callIntent.setData(Uri.parse(attractions[position].getContact()[0])); 
+				callIntent.setData(Uri.parse("tel:"+attractions[position].getContact()[0])); 
 				startActivity(callIntent);
 				
 			}

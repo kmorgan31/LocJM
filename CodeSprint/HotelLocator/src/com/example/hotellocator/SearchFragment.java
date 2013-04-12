@@ -53,11 +53,11 @@ public class SearchFragment extends ListFragment {
 
 				@Override
 				public void onClick(View arg0) {
-//					// TODO Auto-generated method stub
-//					Bundle b = new Bundle();
-//					b.putString("search", query.getText().toString());
-//					Intent myIntent = new Intent(getActivity(), GoogleMap.class).putExtras(b);
-//					startActivity(myIntent);
+					// TODO Auto-generated method stub
+					Bundle b = new Bundle();
+					b.putString("search", query.getText().toString());
+					Intent myIntent = new Intent(getActivity(), GoogleMapActivity.class).putExtras(b);
+					startActivity(myIntent);
 				}
 	      		
 	      	});

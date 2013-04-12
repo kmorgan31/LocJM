@@ -80,16 +80,16 @@ public class HomeFragment extends Fragment {
 			
 		});
 		
-//		nearMeButton.setOnClickListener(new OnClickListener(){
-//			@Override
-//			public void onClick(View arg0) {
-//				// TODO Auto-generated method stub
-//				Intent myIntent = new Intent();
-//				myIntent.setClass(getActivity(), GoogleMapActivity.class);
-//				startActivity(myIntent);
-//			}
-//			
-//		});
+		nearMeButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent myIntent = new Intent();
+				myIntent.setClass(getActivity(), GoogleMapActivity.class);
+				startActivity(myIntent);
+			}
+			
+		});
 		
 		return rootView;
 	}
