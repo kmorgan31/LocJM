@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <qualifiedTypeNameHistroy/>
+=======
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
+<fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+</qualifiedTypeNameHistroy>
+>>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a

@@ -2,11 +2,11 @@ package com.example.hotellocator;
 
 import java.util.ArrayList;
 
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class SearchFragment extends ListFragment {
 	final Hotel[] hotels = {
@@ -53,11 +53,11 @@ public class SearchFragment extends ListFragment {
 
 				@Override
 				public void onClick(View arg0) {
-					// TODO Auto-generated method stub
-					Bundle b = new Bundle();
-					b.putString("search", query.getText().toString());
-					Intent myIntent = new Intent(getActivity(), GoogleMapActivity.class).putExtras(b);
-					startActivity(myIntent);
+//					// TODO Auto-generated method stub
+//					Bundle b = new Bundle();
+//					b.putString("search", query.getText().toString());
+//					Intent myIntent = new Intent(getActivity(), GoogleMap.class).putExtras(b);
+//					startActivity(myIntent);
 				}
 	      		
 	      	});
@@ -91,20 +91,27 @@ public class SearchFragment extends ListFragment {
 		ArrayList<String> found = new ArrayList<String>();
 		
 		for (int i=0;i<hotels.length;i++){	
-			if(hotels[i].getHotelName().equals(query)){
+			if(hotels[i].getHotelName().contains(query)){
 				found.add(hotels[i].getHotelName());
 			}
 		}
 		for (int i=0;i<attractions.length;i++){	
-			if(attractions[i].getName().equals(query)){
+			if(attractions[i].getName().contains(query)){
 				found.add(attractions[i].getName());
 			}
 		}
 		
-		Intent myIntent = new Intent();
-		myIntent.setClass(getActivity(), SearchableActivity.class);
-		myIntent.putExtra("names", found);
-	    startActivity(myIntent);
+		if(found.isEmpty()){
+			Toast.makeText(getActivity(),
+					"No matches for search",
+						Toast.LENGTH_SHORT).show();
+		}
+		else{
+			Intent myIntent = new Intent();
+			myIntent.setClass(getActivity(), SearchableActivity.class);
+			myIntent.putExtra("names", found);
+		    startActivity(myIntent);
+		}
 	}
 
 	@Override

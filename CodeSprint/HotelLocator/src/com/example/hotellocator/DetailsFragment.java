@@ -2,6 +2,7 @@ package com.example.hotellocator;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -22,7 +23,7 @@ public class DetailsFragment extends Activity {
 	TextView address;
 	TextView themes;
 	TextView rating;
-	Button mapButton;
+	Button mapButton, callButton;
 	RatingBar rbar;
 	int position = -1;
 	
@@ -104,12 +105,14 @@ public class DetailsFragment extends Activity {
 					rbar.setRating(0);
 			}}
 			
-			mapButton = (Button)findViewById(R.id.button1);
+			mapButton = (Button)findViewById(R.id.mapButton);
+			callButton = (Button)findViewById(R.id.contactButton);
 			addListenerOnRatingBar(position);
 			
 			//rbar initially user rating
 			
 		mapButton = (Button)findViewById(R.id.mapButton);
+<<<<<<< HEAD
 		mapButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -123,20 +126,32 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
+=======
+>>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
 //		mapButton.setOnClickListener(new OnClickListener(){
-//
-//
 //			@Override
 //			public void onClick(View arg0) {
 //				// TODO Auto-generated method stub
 //				//send LatLng at hotel
 //				Intent myIntent = new Intent(DetailsFragment.this,
-//						GoogleMapFragment.class).putExtra("latlng", hotels[position].getHotelCoordinates());
-//			    startActivity(myIntent);
-//				
+//						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+//			    startActivity(myIntent);	
 //			}
-//			
 //		});
+		
+		callButton.setOnClickListener(new OnClickListener(){
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent callIntent = new Intent(Intent.ACTION_CALL);
+				callIntent.setData(Uri.parse(attractions[position].getContact()[0])); 
+				startActivity(callIntent);
+				
+			}
+			
+		});
 		}
 	
 	
