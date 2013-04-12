@@ -14,7 +14,6 @@ int attr useViewLifecycle 0x7f01000c
 int attr zOrderOnTop 0x7f01000d
 int dimen activity_horizontal_margin 0x7f060000
 int dimen activity_vertical_margin 0x7f060001
-<<<<<<< HEAD
 int drawable facebook 0x7f020000
 int drawable festival 0x7f020001
 int drawable four_seasons 0x7f020002
@@ -29,163 +28,55 @@ int drawable riu 0x7f02000a
 int drawable round_hill 0x7f02000b
 int drawable search 0x7f02000c
 int drawable twitter 0x7f02000d
-int id ImageView01 0x7f04001a
+int id ImageView01 0x7f04001b
 int id SlideMap 0x7f040013
-int id action_settings 0x7f04002c
-int id attractionButton 0x7f040020
-int id attractionDescription 0x7f04001f
-int id attractionName 0x7f04001d
-int id attractionThemes 0x7f04001e
+int id TextView01 0x7f040019
+int id TextView02 0x7f04001e
+int id action_settings 0x7f04002e
+int id attractionButton 0x7f040022
+int id attractionDescription 0x7f040021
+int id attractionName 0x7f04001f
+int id attractionThemes 0x7f040020
 int id button1 0x7f040017
 int id contactButton 0x7f04000f
 int id desBox1 0x7f040015
 int id desBox2 0x7f040016
 int id favoriteList 0x7f040012
-int id filters 0x7f040027
-=======
-int drawable festival 0x7f020000
-int drawable horse 0x7f020001
-int drawable hotel5stars 0x7f020002
-int drawable ic_launcher 0x7f020003
-int drawable images 0x7f020004
-<<<<<<< HEAD
-int drawable logo 0x7f020005
-int drawable search 0x7f020006
-int id ImageView01 0x7f040016
-int id SlideMap 0x7f04000f
-int id action_settings 0x7f040029
-=======
-int drawable search 0x7f020005
-int id ImageView01 0x7f040016
-int id SlideMap 0x7f04000f
-<<<<<<< HEAD
-int id action_settings 0x7f040029
-=======
-int id action_settings 0x7f040026
->>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
->>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
-int id attractionButton 0x7f04001d
-int id attractionDescription 0x7f04001c
-int id attractionName 0x7f040019
-int id attractionThemes 0x7f04001b
-int id button1 0x7f040013
-<<<<<<< HEAD
-=======
-int id contactButton 0x7f04000d
-int id desBox1 0x7f040011
-int id desBox2 0x7f040012
-int id favoriteList 0x7f04000e
-<<<<<<< HEAD
-int id filters 0x7f040024
-=======
-=======
-<<<<<<< HEAD
-int id ImageView01 0x7f040015
-int id SlideMap 0x7f04000e
-int id action_settings 0x7f040028
-int id attractionButton 0x7f04001c
-int id attractionDescription 0x7f04001b
-int id attractionName 0x7f040018
-int id attractionThemes 0x7f04001a
-int id button1 0x7f040012
->>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
-int id contactButton 0x7f04000d
-int id desBox1 0x7f040011
-int id desBox2 0x7f040012
-int id favoriteList 0x7f04000e
-int id filters 0x7f040024
->>>>>>> 35d57ac6f4d8c91c26bf1e5495db16e53217dd60
+int id filters 0x7f040029
 int id hotelAddress 0x7f040008
-int id hotelButton 0x7f04001b
+int id hotelButton 0x7f04001c
 int id hotelDescription 0x7f040009
-int id hotelName 0x7f040019
+int id hotelName 0x7f04001a
 int id hotelRating 0x7f040007
 int id hybrid 0x7f040004
 int id imageView1 0x7f040006
 int id imageView2 0x7f040010
 int id imageView3 0x7f040011
 int id layout1 0x7f040018
-int id layout2 0x7f04001c
+int id layout2 0x7f04001d
 int id linearLayout1 0x7f04000d
-int id map 0x7f040023
+int id map 0x7f040025
 int id mapButton 0x7f04000e
-int id mapSearchButton 0x7f04002a
+int id mapSearchButton 0x7f04002c
 int id name 0x7f040005
-int id nearMe 0x7f040021
+int id nearMe 0x7f040023
 int id none 0x7f040000
 int id normal 0x7f040001
-int id pager 0x7f040022
-int id radioButton1 0x7f040028
-int id radioButton2 0x7f040029
+int id pager 0x7f040024
+int id radioButton1 0x7f04002a
+int id radioButton2 0x7f04002b
 int id ratingBar1 0x7f04000b
 int id satellite 0x7f040002
-int id searchArea 0x7f040024
-int id searchButton 0x7f040026
-int id searchField 0x7f040025
+int id searchArea 0x7f040026
+int id searchButton 0x7f040028
+int id searchField 0x7f040027
 int id searchLayout 0x7f04000c
 int id tabListView 0x7f040014
 int id terrain 0x7f040003
-int id textView1 0x7f04002b
+int id textView1 0x7f04002d
 int id themes 0x7f04000a
 int layout activity_details 0x7f030000
 int layout activity_favorite 0x7f030001
-<<<<<<< HEAD
-=======
-=======
-int id textView1 0x7f040027
-int id themes 0x7f04000a
-int layout activity_details 0x7f030000
-int layout activity_favourites 0x7f030001
-=======
-int id ImageView01 0x7f040013
-int id action_settings 0x7f040023
-int id attractionButton 0x7f04001a
-int id attractionDescription 0x7f040019
-int id attractionName 0x7f040016
-int id attractionThemes 0x7f040018
-int id button1 0x7f040010
-int id desBox1 0x7f04000e
-int id desBox2 0x7f04000f
-int id favoriteList 0x7f04000d
->>>>>>> a57de24a4b3f6a6f089993ecbf6cec604c0c9a26
->>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
-int id hotelAddress 0x7f040008
-int id hotelButton 0x7f040017
-int id hotelDescription 0x7f040009
-int id hotelName 0x7f040015
-int id hotelRating 0x7f040007
-int id hybrid 0x7f040004
-int id imageView1 0x7f040006
-int id imageView2 0x7f04001a
-int id layout1 0x7f040014
-int id layout2 0x7f040018
-int id map 0x7f040020
-int id mapButton 0x7f04000c
-int id mapSearchButton 0x7f040027
-int id name 0x7f040005
-int id nearMe 0x7f04001e
-int id none 0x7f040000
-int id normal 0x7f040001
-int id pager 0x7f04001f
-int id radioButton1 0x7f040025
-int id radioButton2 0x7f040026
-int id ratingBar1 0x7f04000b
-int id satellite 0x7f040002
-int id searchArea 0x7f040021
-int id searchButton 0x7f040023
-int id searchField 0x7f040022
-int id tabListView 0x7f040010
-int id terrain 0x7f040003
-int id textView1 0x7f040028
-int id themes 0x7f04000a
-int layout activity_details 0x7f030000
-int layout activity_favorite 0x7f030001
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
->>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
->>>>>>> 35d57ac6f4d8c91c26bf1e5495db16e53217dd60
 int layout activity_favourites 0x7f030002
 int layout activity_featured 0x7f030003
 int layout activity_home 0x7f030004
@@ -194,25 +85,6 @@ int layout activity_map 0x7f030006
 int layout activity_searchable 0x7f030007
 int layout activity_searchable_results 0x7f030008
 int layout fragment_main_dummy 0x7f030009
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61cb6c985e1717e24302aecaceeec1205ddf0ce3
-int layout activity_featured 0x7f030002
-int layout activity_home 0x7f030003
-int layout activity_main 0x7f030004
-int layout activity_map 0x7f030005
-int layout activity_searchable 0x7f030006
-int layout activity_searchable_results 0x7f030007
-int layout fragment_main_dummy 0x7f030008
->>>>>>> a57de24a4b3f6a6f089993ecbf6cec604c0c9a26
->>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
->>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
->>>>>>> 35d57ac6f4d8c91c26bf1e5495db16e53217dd60
 int menu details 0x7f080000
 int menu featured 0x7f080001
 int menu home 0x7f080002

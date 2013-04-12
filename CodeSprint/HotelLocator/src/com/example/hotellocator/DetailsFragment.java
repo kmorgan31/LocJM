@@ -145,11 +145,7 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 //		mapButton.setOnClickListener(new OnClickListener(){
 //			@Override
 //			public void onClick(View arg0) {
@@ -160,7 +156,7 @@ public class DetailsFragment extends Activity {
 //			    startActivity(myIntent);	
 //			}
 //		});
-=======
+
 		mapButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -171,10 +167,7 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
->>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
->>>>>>> 35d57ac6f4d8c91c26bf1e5495db16e53217dd60
-		
->>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
+
 		callButton.setOnClickListener(new OnClickListener(){
 			
 			@Override

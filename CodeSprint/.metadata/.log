@@ -2234,3 +2234,324 @@ org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The markup in the
 =======
 >>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
 >>>>>>> 35d57ac6f4d8c91c26bf1e5495db16e53217dd60
+!SESSION 2013-04-12 11:54:15.306 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.7.0_11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.ui 4 0 2013-04-12 11:54:45.450
+!MESSAGE Unable to restore working set state.
+!STACK 1
+org.eclipse.ui.WorkbenchException: The content of elements must consist of well-formed character data or markup.
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:143)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:65)
+	at org.eclipse.ui.internal.WorkingSetManager.restoreState(WorkingSetManager.java:115)
+	at org.eclipse.ui.internal.WorkbenchPlugin.getWorkingSetManager(WorkbenchPlugin.java:610)
+	at org.eclipse.ui.internal.Workbench.getWorkingSetManager(Workbench.java:1470)
+	at org.eclipse.ui.internal.WorkbenchPage.restoreState(WorkbenchPage.java:3251)
+	at org.eclipse.ui.internal.WorkbenchWindow.restoreState(WorkbenchWindow.java:2232)
+	at org.eclipse.ui.internal.Workbench.doRestoreState(Workbench.java:3687)
+	at org.eclipse.ui.internal.Workbench.access$32(Workbench.java:3629)
+	at org.eclipse.ui.internal.Workbench$60.run(Workbench.java:2329)
+	at org.eclipse.ui.internal.Workbench.runStartupWithProgress(Workbench.java:2026)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:2327)
+	at org.eclipse.ui.internal.Workbench.access$30(Workbench.java:2298)
+	at org.eclipse.ui.internal.Workbench$54.run(Workbench.java:2144)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:2088)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor$1.run(WorkbenchAdvisor.java:781)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The content of elements must consist of well-formed character data or markup.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:116)
+	... 17 more
+!SUBENTRY 1 org.eclipse.ui 4 0 2013-04-12 11:54:45.455
+!MESSAGE The content of elements must consist of well-formed character data or markup.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 2; The content of elements must consist of well-formed character data or markup.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:116)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:65)
+	at org.eclipse.ui.internal.WorkingSetManager.restoreState(WorkingSetManager.java:115)
+	at org.eclipse.ui.internal.WorkbenchPlugin.getWorkingSetManager(WorkbenchPlugin.java:610)
+	at org.eclipse.ui.internal.Workbench.getWorkingSetManager(Workbench.java:1470)
+	at org.eclipse.ui.internal.WorkbenchPage.restoreState(WorkbenchPage.java:3251)
+	at org.eclipse.ui.internal.WorkbenchWindow.restoreState(WorkbenchWindow.java:2232)
+	at org.eclipse.ui.internal.Workbench.doRestoreState(Workbench.java:3687)
+	at org.eclipse.ui.internal.Workbench.access$32(Workbench.java:3629)
+	at org.eclipse.ui.internal.Workbench$60.run(Workbench.java:2329)
+	at org.eclipse.ui.internal.Workbench.runStartupWithProgress(Workbench.java:2026)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:2327)
+	at org.eclipse.ui.internal.Workbench.access$30(Workbench.java:2298)
+	at org.eclipse.ui.internal.Workbench$54.run(Workbench.java:2144)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:2088)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor$1.run(WorkbenchAdvisor.java:781)
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-04-12 11:54:52.625
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: HotelLocator
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:817)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:184)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Could not delete '/HotelLocator/bin/classes/com'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1978)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:804)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:184)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\CodeSprint\CodeSprint\HotelLocator\bin\classes\com\example.
+Contains: Could not delete: C:\CodeSprint\CodeSprint\HotelLocator\bin\classes\com.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2013-04-12 11:54:52.626
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2013-04-12 11:54:52.626
+!MESSAGE Could not delete '/HotelLocator/bin/classes/com'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1978)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:804)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:184)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\CodeSprint\CodeSprint\HotelLocator\bin\classes\com\example.
+Contains: Could not delete: C:\CodeSprint\CodeSprint\HotelLocator\bin\classes\com.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2013-04-12 11:54:52.627
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2013-04-12 11:54:52.627
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2013-04-12 11:54:52.627
+!MESSAGE Could not delete: C:\CodeSprint\CodeSprint\HotelLocator\bin\classes\com\example.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2013-04-12 11:54:52.627
+!MESSAGE Could not delete: C:\CodeSprint\CodeSprint\HotelLocator\bin\classes\com.
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-04-12 11:54:53.663
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-04-12 11:54:53.666
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Kris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-04-12 12:17:59.100
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.jdt.internal.ui.JavaUIException: Problems reading information from XML 'QualifiedTypeNameHistory.xml'
+	at org.eclipse.jdt.internal.corext.util.History.createException(History.java:71)
+	at org.eclipse.jdt.internal.corext.util.History.load(History.java:260)
+	at org.eclipse.jdt.internal.corext.util.History.load(History.java:168)
+	at org.eclipse.jdt.internal.corext.util.QualifiedTypeNameHistory.<init>(QualifiedTypeNameHistory.java:33)
+	at org.eclipse.jdt.internal.corext.util.QualifiedTypeNameHistory.getDefault(QualifiedTypeNameHistory.java:26)
+	at org.eclipse.jdt.internal.corext.util.QualifiedTypeNameHistory.getBoost(QualifiedTypeNameHistory.java:61)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.createTypeRefChangeProposal(UnresolvedElementsSubProcessor.java:649)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarTypeProposals(UnresolvedElementsSubProcessor.java:623)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:566)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:329)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:270)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:378)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:339)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:335)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:468)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:224)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getCompletionProposals(ProblemHover.java:198)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.deferredCreateContent(AbstractAnnotationHover.java:284)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.setInput(AbstractAnnotationHover.java:186)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1181)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1150)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:902)
+	at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:243)
+	at org.eclipse.jface.text.TextViewerHoverManager$5.run(TextViewerHoverManager.java:233)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.jdt.internal.corext.util.History.load(History.java:258)
+	... 48 more
+!SUBENTRY 1 org.eclipse.jdt.ui 4 4 2013-04-12 12:17:59.102
+!MESSAGE Problems reading information from XML 'QualifiedTypeNameHistory.xml'
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document preceding the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.jdt.internal.corext.util.History.load(History.java:258)
+	at org.eclipse.jdt.internal.corext.util.History.load(History.java:168)
+	at org.eclipse.jdt.internal.corext.util.QualifiedTypeNameHistory.<init>(QualifiedTypeNameHistory.java:33)
+	at org.eclipse.jdt.internal.corext.util.QualifiedTypeNameHistory.getDefault(QualifiedTypeNameHistory.java:26)
+	at org.eclipse.jdt.internal.corext.util.QualifiedTypeNameHistory.getBoost(QualifiedTypeNameHistory.java:61)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.createTypeRefChangeProposal(UnresolvedElementsSubProcessor.java:649)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarTypeProposals(UnresolvedElementsSubProcessor.java:623)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:566)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:329)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:270)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:378)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:339)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:335)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:468)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:224)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getCompletionProposals(ProblemHover.java:198)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.deferredCreateContent(AbstractAnnotationHover.java:284)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.setInput(AbstractAnnotationHover.java:186)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1181)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1150)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:902)
+	at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:243)
+	at org.eclipse.jface.text.TextViewerHoverManager$5.run(TextViewerHoverManager.java:233)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)

@@ -16,11 +16,21 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="Featured Hotels" />
+
+        <TextView
             android:id="@+id/hotelName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/hotelName"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:textSize="20sp" />
 
@@ -31,7 +41,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginTop="15dp"
             android:layout_below="@+id/hotelName"
-            android:src="@drawable/hotel" />
+            android:src="@drawable/pegasus" />
 
         <TextView
             android:id="@+id/hotelDescription"
@@ -51,6 +61,7 @@
             android:layout_below="@+id/ImageView01"
             android:text="See More Hotels"
             android:textSize="12sp" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -60,6 +71,14 @@
         android:layout_below="@+id/layout1"
         android:orientation="vertical"
         android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Featured Attractions"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/attractionName"
@@ -104,6 +123,7 @@
             android:layout_below="@+id/attractionDescription"
             android:text="See More Attractions"
             android:textSize="12sp" />
+
     </RelativeLayout>
 
     <Button
