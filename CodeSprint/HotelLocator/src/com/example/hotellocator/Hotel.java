@@ -12,21 +12,21 @@ public class Hotel implements Serializable{
 	private String hotelName;
 	private String address;
 	private String description;
-	private int id;
+	private String community;
+	private String parish;
 	private LatLng hotelCoordinates;
 	private float averageUserRating;
 	private int numUserRatings;
-	private int hotelRating;
 	
-	public Hotel(String hName, String hAddress, String hDesc, int hId, LatLng hCoords, int hRating){
+	public Hotel(String hName, String hAddress, String hDesc, String hCommunity, String hParish, LatLng hCoords){
 		hotelName = hName;
 		address = hAddress;
 		description = hDesc;
-		id = hId;
+		community = hCommunity;
+		parish = hParish;
 		hotelCoordinates = hCoords;
 		averageUserRating = 0;
 		numUserRatings=0;
-		hotelRating = hRating;
 	}
 
 	public String getHotelName() {
@@ -53,12 +53,20 @@ public class Hotel implements Serializable{
 		this.description = description;
 	}
 
-	public int getId() {
-		return id;
+	public String getCommunity() {
+		return community;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCommunity(String community) {
+		this.community = community;
+	}
+
+	public String getParish() {
+		return parish;
+	}
+
+	public void setParish(String parish) {
+		this.parish = parish;
 	}
 
 	public LatLng getHotelCoordinates() {
@@ -75,14 +83,6 @@ public class Hotel implements Serializable{
 
 	public void setAverageUserRating(float f) {
 		this.averageUserRating = f;
-	}
-
-	public int getHotelRating() {
-		return hotelRating;
-	}
-
-	public void setHotelRating(int hotelRating) {
-		this.hotelRating = hotelRating;
 	}
 
 	public int getNumUserRatings() {

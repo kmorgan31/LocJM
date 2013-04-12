@@ -14,45 +14,73 @@
         android:layout_height="wrap_content"
         android:weightSum="100"
         android:orientation="horizontal">
+
     <LinearLayout
         android:layout_weight="30"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         >
-    <EditText
-        android:id="@+id/searchField"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:ems="15" >
-    </EditText>
+	    <EditText
+	        android:id="@+id/searchField"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10" >
+    	</EditText>
+   
     </LinearLayout>
+    
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="70"
         android:weightSum="100"
         android:orientation="horizontal">
+    
     <ImageButton
         android:id="@+id/searchButton"
-        android:layout_weight="60"
-        android:layout_width="fill_parent"
+        android:layout_width="45dp"
         android:layout_height="45dp"
         android:scaleType="fitXY"
         android:src="@drawable/search" />
-	<Button
+
+    <RadioGroup
+        android:id="@+id/filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchArea"
+            android:checked="true"
+            android:text="By Name" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="By Region" />
+    </RadioGroup>
+
+	</LinearLayout>
+	</LinearLayout>
+
+    <Button
         android:id="@+id/mapSearchButton"
-        android:layout_weight="40"
         android:layout_width="fill_parent"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
+        android:layout_weight="40"
+        android:layout_below="@+id/searchArea"
         android:text="Around Me"
         android:textSize="10sp" />
-	</LinearLayout>
-	</LinearLayout>
+     
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:layout_below="@+id/searchArea">
+        android:layout_below="@+id/mapSearchButton">
     </ListView>
 
 
