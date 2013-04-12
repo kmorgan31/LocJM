@@ -151,10 +151,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         		if(position==1)
         			fragment = new SearchFragment();
         		else
-        			fragment = new DummySectionFragment();
-	            	Bundle args = new Bundle();
-	            	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-	            	((Fragment) fragment).setArguments(args);
+        			fragment = new Favourites();
+//	            	Bundle args = new Bundle();
+//	            	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+//	            	((Fragment) fragment).setArguments(args);
 //        	switch(position){
 //        		case 0: fragment = new HomeFragment();
 //        				break;

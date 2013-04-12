@@ -1,15 +1,11 @@
 package com.example.hotellocator;
 
-import java.util.ArrayList;
-
 import com.google.android.gms.maps.model.LatLng;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -84,16 +80,16 @@ public class HomeFragment extends Fragment {
 			
 		});
 		
-		nearMeButton.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Intent myIntent = new Intent();
-				myIntent.setClass(getActivity(), GoogleMapActivity.class);
-				startActivity(myIntent);
-			}
-			
-		});
+//		nearMeButton.setOnClickListener(new OnClickListener(){
+//			@Override
+//			public void onClick(View arg0) {
+//				// TODO Auto-generated method stub
+//				Intent myIntent = new Intent();
+//				myIntent.setClass(getActivity(), GoogleMapActivity.class);
+//				startActivity(myIntent);
+//			}
+//			
+//		});
 		
 		return rootView;
 	}

@@ -7,43 +7,42 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DetailsFragment" >
-    
-   
+
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView1"
         android:layout_marginTop="10dp"
-        android:gravity = "center"
-        android:textSize = "25sp"/>
-    
+        android:gravity="center"
+        android:textSize="25sp" />
+
     <TextView
         android:id="@+id/hotelRating"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:textSize ="12sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#CCC"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textSize="12sp" />
 
-    <ImageView 
-        android:id="@+id/imageView1" 
-        android:layout_width="match_parent" 
-        android:layout_height="wrap_content" 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/hotelRating"
         android:src="@drawable/images" />
-    
+
     <TextView
         android:id="@+id/hotelAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
         android:layout_marginTop="20dp"
-        android:textSize = "15sp"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/hotelDescription"
@@ -51,10 +50,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/hotelAddress"
         android:layout_marginTop="10dp"
-        android:textSize = "15sp"
         android:maxLength="140"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/themes"
@@ -65,21 +64,33 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/mapButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Map" />
-
     <RatingBar
         android:id="@+id/ratingBar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mapButton"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:stepSize="0.5" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratingBar1"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/mapButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Map" />
+
+        <Button
+            android:id="@+id/contactButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact" />
+    </LinearLayout>
 
 </RelativeLayout>

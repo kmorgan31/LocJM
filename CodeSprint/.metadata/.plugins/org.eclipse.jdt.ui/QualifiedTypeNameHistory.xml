@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<<<<<<< HEAD
-<fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="org.json.JSONObject"/>
-<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
-<fullyQualifiedTypeName name="org.apache.http.client.HttpClient"/>
-<fullyQualifiedTypeName name="org.apache.http.HttpResponse"/>
-<fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultHttpClient"/>
-<fullyQualifiedTypeName name="org.apache.http.HttpEntity"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="org.apache.http.client.ClientProtocolException"/>
-<fullyQualifiedTypeName name="org.json.JSONException"/>
-<fullyQualifiedTypeName name="java.util.zip.Inflater"/>
-<fullyQualifiedTypeName name="android.widget.ExpandableListView"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
 <fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
-=======
-<fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
-<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
-<fullyQualifiedTypeName name="android.content.Context"/>
-<fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="android.view.ViewGroup"/>
-<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
-<fullyQualifiedTypeName name="android.app.Activity"/>
->>>>>>> 5a0b783c5133509f8f6394003e4faaaa3f9eb3b0
+<fullyQualifiedTypeName name="android.net.Uri"/>
 </qualifiedTypeNameHistroy>
