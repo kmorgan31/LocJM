@@ -139,14 +139,16 @@ containing a value of this type.
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int horse=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int images=0x7f020002;
-        public static final int search=0x7f020003;
+        public static final int festival=0x7f020000;
+        public static final int horse=0x7f020001;
+        public static final int hotel5stars=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int images=0x7f020004;
+        public static final int search=0x7f020005;
     }
     public static final class id {
         public static final int ImageView01=0x7f040012;
-        public static final int action_settings=0x7f04001f;
+        public static final int action_settings=0x7f040020;
         public static final int attractionButton=0x7f040019;
         public static final int attractionDescription=0x7f040018;
         public static final int attractionName=0x7f040015;
@@ -164,18 +166,19 @@ containing a value of this type.
         public static final int imageView2=0x7f040016;
         public static final int layout1=0x7f040010;
         public static final int layout2=0x7f040014;
-        public static final int map=0x7f04001b;
+        public static final int map=0x7f04001c;
         public static final int mapButton=0x7f04000b;
         public static final int name=0x7f040005;
+        public static final int nearMe=0x7f04001a;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
-        public static final int pager=0x7f04001a;
+        public static final int pager=0x7f04001b;
         public static final int ratingBar1=0x7f04000c;
         public static final int satellite=0x7f040002;
-        public static final int searchButton=0x7f04001d;
-        public static final int searchField=0x7f04001c;
+        public static final int searchButton=0x7f04001e;
+        public static final int searchField=0x7f04001d;
         public static final int terrain=0x7f040003;
-        public static final int textView1=0x7f04001e;
+        public static final int textView1=0x7f04001f;
         public static final int themes=0x7f04000a;
     }
     public static final class layout {

@@ -25,7 +25,7 @@ public class FeaturedFragment extends ListActivity {
 	TextView name;
 	TextView tBox2;
 	Button seeMore;
-	String list;
+	String type;
 
 	ArrayList<String> featuredList = new ArrayList<String>();
 	ArrayAdapter<String> listAdapter;
@@ -52,9 +52,9 @@ public class FeaturedFragment extends ListActivity {
       	tBox1 = (TextView)findViewById(R.id.desBox1);
       	tBox2 = (TextView)findViewById(R.id.desBox2);
       	
-      	list = getIntent().getStringExtra("list");
+      	type = getIntent().getStringExtra("type");
       	
-      	if(list.equals("hotel")){	
+      	if(type.equals("hotel")){	
 			name.setText(featuredHotels[0].getHotelName());
 			tBox1.setText(featuredHotels[0].getDescription());
 			tBox2.setVisibility(View.INVISIBLE);
@@ -64,7 +64,7 @@ public class FeaturedFragment extends ListActivity {
 			}
       	}
       	else{
-      		if(list.equals("attraction"))
+      		if(type.equals("attraction"))
       		{
       			name.setText(featuredAttractions[0].getName());
     			tBox1.setText(featuredAttractions[0].getDescription());
@@ -93,13 +93,13 @@ public class FeaturedFragment extends ListActivity {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
 				myIntent.setClass(FeaturedFragment.this, DetailsFragment.class);
-				if(list.equals("hotel")){
-					myIntent.putExtra("hotel", featuredHotels[0].getHotelName());
-					myIntent.putExtra("type", "hotel");}
+				if(type.equals("hotel")){
+					myIntent.putExtra("name", featuredHotels[0].getHotelName());
+					myIntent.putExtra("type", type);}
 				else
-					if(list.equals("attraction")){
-						myIntent.putExtra("attraction", featuredAttractions[0].getName());
-						myIntent.putExtra("type", "attraction");}
+					if(type.equals("attraction")){
+						myIntent.putExtra("name", featuredAttractions[0].getName());
+						myIntent.putExtra("type", type);}
 			    startActivity(myIntent);
 			}
 			
@@ -112,12 +112,12 @@ public class FeaturedFragment extends ListActivity {
 				 //Go to details of hotel
 				Intent myIntent = new Intent();
 				myIntent.setClass(this, DetailsFragment.class);
-				if(list.equals("hotel")){
-					myIntent.putExtra("hotel", featuredHotels[position+1].getHotelName());
+				if(type.equals("hotel")){
+					myIntent.putExtra("name", featuredHotels[position+1].getHotelName());
 					myIntent.putExtra("type", "hotel");}
 				else
-					if(list.equals("attraction")){
-						myIntent.putExtra("attraction", featuredAttractions[position+1].getName());
+					if(type.equals("attraction")){
+						myIntent.putExtra("name", featuredAttractions[position+1].getName());
 						myIntent.putExtra("type", "attraction");}
 				
 			    startActivity(myIntent);

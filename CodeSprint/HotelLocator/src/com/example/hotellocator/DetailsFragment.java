@@ -49,9 +49,8 @@ public class DetailsFragment extends Activity {
 		
 		
 		type = getIntent().getStringExtra("type");
+		name = getIntent().getStringExtra("name");
 		if(type.equals("hotel")){
-			System.out.println(type);
-			name = getIntent().getStringExtra("hotel");
 			for(int i=0;i<hotels.length;i++)
 			{
 				if(hotels[i].getHotelName().equals(name))
@@ -63,7 +62,6 @@ public class DetailsFragment extends Activity {
 		}
 		else{
 			System.out.println(type);
-			name = getIntent().getStringExtra("attraction");
 			for(int i=0;i<attractions.length;i++)
 			{
 				if(attractions[i].getName().equals(name))

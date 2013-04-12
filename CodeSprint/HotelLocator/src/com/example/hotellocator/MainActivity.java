@@ -174,7 +174,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 4;
+            return 3;
         }
 
         @Override
@@ -187,8 +187,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 case 1:
                     return "All";
                 case 2:
-                	return "Map";
-                case 3:
                 	return "Favourites";
             }
             return null;

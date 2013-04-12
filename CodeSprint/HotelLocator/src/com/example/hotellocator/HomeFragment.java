@@ -19,7 +19,7 @@ import android.widget.TextView;
 public class HomeFragment extends Fragment {
 
 	TextView hotelName, hotelDescription, attractionName, attractionDescription, attractionThemes;
-	Button hotelButton, attractionButton;
+	Button hotelButton, attractionButton, nearMeButton;
 	String s ="";
 	
 	final Hotel[] featuredHotels = {
@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment {
 		hotelDescription.setText(featuredHotels[0].getDescription());
 		hotelButton = (Button)rootView.findViewById(R.id.hotelButton);
 		attractionButton = (Button)rootView.findViewById(R.id.attractionButton);
+		nearMeButton = (Button)rootView.findViewById(R.id.nearMe);
 		
 		attractionName = (TextView)rootView.findViewById(R.id.attractionName);
 		attractionName.setText(featuredAttractions[0].getName());
@@ -65,7 +66,7 @@ public class HomeFragment extends Fragment {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
 				myIntent.setClass(getActivity(), FeaturedFragment.class);
-				myIntent.putExtra("list", "hotel");
+				myIntent.putExtra("type", "hotel");
 			    startActivity(myIntent);
 			}
 			
@@ -77,8 +78,19 @@ public class HomeFragment extends Fragment {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
 				myIntent.setClass(getActivity(), FeaturedFragment.class);
-				myIntent.putExtra("list", "attraction");
+				myIntent.putExtra("type", "attraction");
 			    startActivity(myIntent);
+			}
+			
+		});
+		
+		nearMeButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent myIntent = new Intent();
+				myIntent.setClass(getActivity(), GoogleMapActivity.class);
+				startActivity(myIntent);
 			}
 			
 		});
