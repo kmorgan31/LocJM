@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
-<fullyQualifiedTypeName name="android.net.Uri"/>
-<fullyQualifiedTypeName name="android.widget.RadioButton"/>
-<fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
-<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
 </qualifiedTypeNameHistroy>
->>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
->>>>>>> a57de24a4b3f6a6f089993ecbf6cec604c0c9a26
->>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c

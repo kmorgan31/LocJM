@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="683" x="683" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -51,21 +51,25 @@
 <part id="13"/>
 <part id="14"/>
 <part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DetailsFragment.java" partName="DetailsFragment.java" path="C:/CodeSprint/CodeSprint/HotelLocator/src/com/example/hotellocator/DetailsFragment.java" title="DetailsFragment.java" tooltip="HotelLocator/src/com/example/hotellocator/DetailsFragment.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/src/com/example/hotellocator/DetailsFragment.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7804" selectionTopPixel="1845"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7053" selectionTopPixel="1410"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FeaturedFragment.java" partName="FeaturedFragment.java" path="C:/CodeSprint/CodeSprint/HotelLocator/src/com/example/hotellocator/FeaturedFragment.java" title="FeaturedFragment.java" tooltip="HotelLocator/src/com/example/hotellocator/FeaturedFragment.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/src/com/example/hotellocator/FeaturedFragment.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="526" selectionTopPixel="285"/>
+<editorState selectionHorizontalPixel="27" selectionLength="0" selectionOffset="4594" selectionTopPixel="585"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoogleMapActivity.java" partName="GoogleMapActivity.java" path="C:/CodeSprint/CodeSprint/HotelLocator/src/com/example/hotellocator/GoogleMapActivity.java" title="GoogleMapActivity.java" tooltip="HotelLocator/src/com/example/hotellocator/GoogleMapActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/src/com/example/hotellocator/GoogleMapActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11496" selectionTopPixel="5438"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="35" selectionTopPixel="0"/>
 </editor>
 <editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="HotelLocator Manifest" path="C:/CodeSprint/CodeSprint/HotelLocator/AndroidManifest.xml" title="HotelLocator Manifest" tooltip="HotelLocator/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/AndroidManifest.xml"/>
@@ -76,7 +80,7 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HomeFragment.java" partName="HomeFragment.java" path="C:/CodeSprint/CodeSprint/HotelLocator/src/com/example/hotellocator/HomeFragment.java" title="HomeFragment.java" tooltip="HotelLocator/src/com/example/hotellocator/HomeFragment.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/src/com/example/hotellocator/HomeFragment.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1744" selectionTopPixel="199"/>
+<editorState selectionHorizontalPixel="77" selectionLength="0" selectionOffset="3175" selectionTopPixel="19"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyAdapter.java" partName="MyAdapter.java" path="C:/CodeSprint/CodeSprint/HotelLocator/src/com/example/hotellocator/MyAdapter.java" title="MyAdapter.java" tooltip="HotelLocator/src/com/example/hotellocator/MyAdapter.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/src/com/example/hotellocator/MyAdapter.java"/>
@@ -114,6 +118,18 @@
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_searchable_results.xml" partName="activity_searchable_results.xml" path="C:/CodeSprint/CodeSprint/HotelLocator/res/layout/activity_searchable_results.xml" title="activity_searchable_results.xml" tooltip="HotelLocator/res/layout/activity_searchable_results.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/res/layout/activity_searchable_results.xml"/>
 </editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_home.xml" partName="activity_home.xml" path="C:/CodeSprint/CodeSprint/HotelLocator/res/layout/activity_home.xml" title="activity_home.xml" tooltip="HotelLocator/res/layout/activity_home.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/res/layout/activity_home.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_favourites.xml" partName="activity_favourites.xml" path="C:/CodeSprint/CodeSprint/HotelLocator/res/layout/activity_favourites.xml" title="activity_favourites.xml" tooltip="HotelLocator/res/layout/activity_favourites.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/res/layout/activity_favourites.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_favorite.xml" partName="activity_favorite.xml" path="C:/CodeSprint/CodeSprint/HotelLocator/res/layout/activity_favorite.xml" title="activity_favorite.xml" tooltip="HotelLocator/res/layout/activity_favorite.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/res/layout/activity_favorite.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_featured.xml" partName="activity_featured.xml" path="C:/CodeSprint/CodeSprint/HotelLocator/res/layout/activity_featured.xml" title="activity_featured.xml" tooltip="HotelLocator/res/layout/activity_featured.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HotelLocator/res/layout/activity_featured.xml"/>
+</editor>
 </editors>
 <views>
 <view id="com.android.ide.eclipse.ddms.views.DeviceView" partName="Devices"/>
@@ -131,7 +147,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (20 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -337,7 +352,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.17564575" ratioLeft="238" ratioRight="1117" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7621212" ratioLeft="503" ratioRight="157" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -355,7 +370,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.8062157" ratioLeft="441" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="right" ratio="0.68761224" ratioLeft="766" ratioRight="348" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -374,163 +389,133 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/DetailsFragment.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/SearchFragment.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/SearchableActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/Favourites.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/FeaturedFragment.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_details.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_searchable.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_home.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/HomeFragment.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/MainActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/MyAdapter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/DisplayAdapter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/DetailsFragment.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/HotelLocator/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/GoogleMapActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/HotelLocator/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/values/strings.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_searchable_results.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/SearchableActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/Favourites.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/SearchFragment.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HotelLocator/src/com/example/hotellocator/FeaturedFragment.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_favourites.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_favorite.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/HotelLocator/res/layout/activity_featured.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/HotelLocator/res/layout/activity_details.xml"/>
 </editors>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="4846" y="0"/>
+<item historyLabel="activity_searchable.xml" index="2"/>
+<item historyLabel="activity_details.xml" index="1"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="4458" y="194"/>
 </item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="5230" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="5115" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="5230" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="5177" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="5544" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="3754" y="1798"/>
-</item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="2554" y="0"/>
-</item>
-<item historyLabel="HomeFragment.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="SearchableActivity.java" index="2">
-<position info="not_deleted" x="4475" y="0"/>
-</item>
-<item historyLabel="SearchFragment.java" index="1">
-<position info="not_deleted" x="4647" y="0"/>
+<item historyLabel="activity_home.xml" index="3"/>
+<item historyLabel="HomeFragment.java" index="4">
+<position info="not_deleted" x="2352" y="0"/>
 </item>
 <item historyLabel="DetailsFragment.java" index="0">
-<position info="not_deleted" x="4653" y="0"/>
+<position info="not_deleted" x="596" y="673"/>
 </item>
-<item historyLabel="FeaturedFragment.java" index="4">
-<position info="not_deleted" x="526" y="0"/>
-</item>
-<item historyLabel="DetailsFragment.java" index="0">
-<position info="not_deleted" x="4653" y="0"/>
-</item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="2554" y="0"/>
-</item>
-<item historyLabel="FeaturedFragment.java" index="4">
-<position info="not_deleted" x="526" y="0"/>
-</item>
-<item historyLabel="HomeFragment.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="6">
-<position info="not_deleted" x="3754" y="1798"/>
-</item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="2889" y="0"/>
+<item historyLabel="HomeFragment.java" index="4">
+<position info="not_deleted" x="2390" y="112"/>
 </item>
 <item historyLabel="DetailsFragment.java" index="0">
-<position info="not_deleted" x="7265" y="166"/>
+<position info="not_deleted" x="3636" y="0"/>
 </item>
-<item historyLabel="SearchFragment.java" index="1">
-<position info="not_deleted" x="4647" y="0"/>
+<item historyLabel="HomeFragment.java" index="4">
+<position info="not_deleted" x="2390" y="112"/>
 </item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="2889" y="0"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="2553" y="0"/>
 </item>
-<item historyLabel="MyAdapter.java" index="7">
-<position info="not_deleted" x="936" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="596" y="673"/>
 </item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="5392" y="0"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="2993" y="0"/>
 </item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="5804" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="4075" y="0"/>
 </item>
-<item historyLabel="SearchFragment.java" index="1">
-<position info="not_deleted" x="7593" y="95"/>
+<item historyLabel="HomeFragment.java" index="4">
+<position info="not_deleted" x="2390" y="112"/>
 </item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="5171" y="0"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="2993" y="0"/>
 </item>
-<item historyLabel="DisplayAdapter.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="4075" y="0"/>
 </item>
-<item historyLabel="SearchFragment.java" index="1">
-<position info="not_deleted" x="7593" y="95"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="2993" y="0"/>
 </item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="5171" y="0"/>
+<item historyLabel="HomeFragment.java" index="4">
+<position info="not_deleted" x="3175" y="0"/>
 </item>
-<item historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="8909" y="0"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="3374" y="0"/>
 </item>
-<item historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="4319" y="0"/>
 </item>
-<item historyLabel="Favourites.java" index="3">
-<position info="not_deleted" x="3248" y="19"/>
+<item historyLabel="activity_home.xml" index="3"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="2615" y="0"/>
 </item>
-<item historyLabel="HotelLocator Manifest" index="10"/>
-<item historyLabel="GoogleMapActivity.java" index="11">
-<position info="not_deleted" x="11498" y="0"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="4594" y="0"/>
 </item>
-<item historyLabel="GoogleMapActivity.java" index="11">
-<position info="not_deleted" x="11496" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="7519" y="0"/>
 </item>
-<item historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="activity_home.xml" index="3"/>
+<item historyLabel="FeaturedFragment.java" index="5">
+<position info="not_deleted" x="4594" y="0"/>
 </item>
-<item historyLabel="HotelLocator Manifest" index="12"/>
-<item historyLabel="strings.xml" index="13"/>
-<item historyLabel="HotelLocator Manifest" index="12"/>
-<item historyLabel="activity_searchable_results.xml" index="14"/>
-<item historyLabel="SearchableActivity.java" index="15">
-<position info="not_deleted" x="5503" y="0"/>
+<item historyLabel="activity_favourites.xml" index="6"/>
+<item historyLabel="activity_favorite.xml" index="7"/>
+<item historyLabel="activity_favourites.xml" index="6"/>
+<item historyLabel="activity_featured.xml" index="8"/>
+<item historyLabel="activity_home.xml" index="3"/>
+<item historyLabel="activity_featured.xml" index="8"/>
+<item historyLabel="activity_details.xml" index="1">
+<position info="not_deleted" x="4274" y="0"/>
 </item>
-<item historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="8562" y="0"/>
+<item historyLabel="activity_details.xml" index="9">
+<position info="not_deleted" x="1783" y="0"/>
 </item>
-<item historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="7933" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="5856" y="0"/>
 </item>
-<item historyLabel="Favourites.java" index="16">
-<position info="not_deleted" x="5122" y="0"/>
+<item historyLabel="activity_details.xml" index="1"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="6193" y="0"/>
 </item>
-<item historyLabel="SearchableActivity.java" index="15">
-<position info="not_deleted" x="5503" y="0"/>
+<item historyLabel="activity_details.xml" index="1"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="6193" y="0"/>
 </item>
-<item historyLabel="SearchFragment.java" index="17">
-<position info="not_deleted" x="6068" y="93"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="9238" y="0"/>
 </item>
-<item historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="7915" y="0"/>
+<item historyLabel="activity_details.xml" index="1">
+<position info="not_deleted" x="2016" y="0"/>
 </item>
-<item historyLabel="Favourites.java" index="16">
-<position info="not_deleted" x="5609" y="99"/>
+<item historyLabel="activity_details.xml" index="9">
+<position info="not_deleted" x="1124" y="0"/>
 </item>
-<item active="true" historyLabel="DetailsFragment.java" index="9">
-<position info="not_deleted" x="7915" y="0"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="9238" y="0"/>
+</item>
+<item historyLabel="activity_details.xml" index="1"/>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="9238" y="0"/>
+</item>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="9101" y="0"/>
+</item>
+<item historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="9237" y="0"/>
+</item>
+<item historyLabel="activity_featured.xml" index="8"/>
+<item historyLabel="activity_details.xml" index="1"/>
+<item active="true" historyLabel="DetailsFragment.java" index="0">
+<position info="not_deleted" x="9237" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -550,6 +535,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="pegasus.jpg" tooltip="HotelLocator/res/drawable-hdpi/pegasus.jpg">
+<persistable path="/HotelLocator/res/drawable-hdpi/pegasus.jpg"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_featured.xml" tooltip="HotelLocator/res/layout/activity_featured.xml">
+<persistable path="/HotelLocator/res/layout/activity_featured.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_favorite.xml" tooltip="HotelLocator/res/layout/activity_favorite.xml">
+<persistable path="/HotelLocator/res/layout/activity_favorite.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_favourites.xml" tooltip="HotelLocator/res/layout/activity_favourites.xml">
+<persistable path="/HotelLocator/res/layout/activity_favourites.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_home.xml" tooltip="HotelLocator/res/layout/activity_home.xml">
+<persistable path="/HotelLocator/res/layout/activity_home.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_searchable_results.xml" tooltip="HotelLocator/res/layout/activity_searchable_results.xml">
 <persistable path="/HotelLocator/res/layout/activity_searchable_results.xml"/>
 </file>
@@ -579,21 +579,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SearchableActivity.java" tooltip="HotelLocator/src/com/example/hotellocator/SearchableActivity.java">
 <persistable path="/HotelLocator/src/com/example/hotellocator/SearchableActivity.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyAdapter.java" tooltip="HotelLocator/src/com/example/hotellocator/MyAdapter.java">
-<persistable path="/HotelLocator/src/com/example/hotellocator/MyAdapter.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HomeFragment.java" tooltip="HotelLocator/src/com/example/hotellocator/HomeFragment.java">
-<persistable path="/HotelLocator/src/com/example/hotellocator/HomeFragment.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main_activity_tab.xml" tooltip="HotelLocator/res/layout/activity_main_activity_tab.xml">
-<persistable path="/HotelLocator/res/layout/activity_main_activity_tab.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity_tab.java" tooltip="HotelLocator/src/com/example/hotellocator/MainActivity_tab.java">
-<persistable path="/HotelLocator/src/com/example/hotellocator/MainActivity_tab.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="HotelLocator/AndroidManifest.xml">
-<persistable path="/HotelLocator/AndroidManifest.xml"/>
 </file>
 </mruList>
 </workbench>

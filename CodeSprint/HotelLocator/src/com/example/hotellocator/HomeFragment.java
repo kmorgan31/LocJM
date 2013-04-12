@@ -17,9 +17,12 @@ public class HomeFragment extends Fragment {
 	TextView hotelName, hotelDescription, attractionName, attractionDescription, attractionThemes;
 	Button hotelButton, attractionButton, nearMeButton;
 	String s ="";
+	String desc = "This hotel in Jamaica has an enviable reputation as the Caribbean's premier business and leisure hotel. They are in the vicinity of major businesses, attractions and entertainment in Jamaica." + 
+			" The world-class facilities, competitive rates and warm staff make it the first choice for leisure and business." + 
+			" Captivating and carefree, richly appointed and steeped in tradition, they take you away and bring you closer together. Long one of the most beautiful and elegant boutique resorts in the Caribbean, they cater, with impeccable service and warm Jamaican hospitality, to the needs of its sophisticated guests—families, couples, and friends.";
 	
 	final Hotel[] featuredHotels = {
-			new Hotel("Pegasus", "7 Knutsford Boulevard", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", "Kingston", "Kingston", new LatLng(25.002856, -76.795659)),
+			new Hotel("Pegasus", "7 Knutsford Boulevard", desc, "Kingston", "Kingston", new LatLng(25.002856, -76.795659)),
     		new Hotel("Alhambra Inn", "1 Tucker Avenue", "Close to city", "Kingston 3", "Kingston", new LatLng(-78.3666,18.26627)),
     		new Hotel("Almond Tree", "Arawak P.O. Box 332", "Lovely weather", "Mammee Bay", "St. Ann", new LatLng(-78.3665,18.26398)),
     		new Hotel("Altamont Court Hotel", "1-3 Altamont Terrace", "5 Swimming pools", "Kingston 5", "Kinston", new LatLng(-78.3665,18.27204)),
@@ -29,8 +32,8 @@ public class HomeFragment extends Fragment {
     };
 	
 	final Attraction[] featuredAttractions = {
-		    		new Attraction("Xayamaca", "fun","Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
-		    		new Attraction("White River Valley", "boring", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
+		    		new Attraction("Xayamaca", "The country’s name is derived from an Arawak (aboriginal Indian) word “Xaymaca”, meaning “land of wood and water”.","Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
+		    		new Attraction("White River Valley", "There is a hidden paradise seven miles outside of bustling Ocho Rios, Jamaica. As you begin your descent, feel peace and pleasure all in one place. This is White River Valley. ", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
 		    		new Attraction("Caymanas Track Ltd.", "Caymanas Park is Jamaica's only race track.", "Kingston", "Mr. Michael Sibbles"," Mr. Michael Sibbles", "Caymanas Park Complex", "Gregory Park P.O.", "St. Catherine", new String[]{"988-2523", "988-2524", "988-2525", "988-2526"}, new String[]{"Horse Racing", "Children Entertainment", "Dining"}),
 		    		new Attraction("KOOL RUNNINGS WATER PARK", "Delightful Negril vacation spot", "Negril",	"POINCIANA RESORTS Ltd", "MRS. NEKEISHA MYRIE-KOZER", "NORMAN MANLEY BLVD", null, null, new String[]{"957-5400", "957-5620"}, new String[]{"WATER SLIDES", "GO KARTS", "DINING", "CONFERENCE", "PAINT BALL", "RAFTING"})
 		    };

@@ -31,7 +31,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginTop="15dp"
             android:layout_below="@+id/hotelName"
-            android:src="@drawable/images" />
+            android:src="@drawable/hotel" />
 
         <TextView
             android:id="@+id/hotelDescription"
@@ -47,7 +47,8 @@
             android:id="@+id/hotelButton"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_below="@+id/hotelDescription"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/ImageView01"
             android:text="See More Hotels"
             android:textSize="12sp" />
     </RelativeLayout>
@@ -92,6 +93,7 @@
             android:id="@+id/attractionDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_below="@+id/imageView2"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
