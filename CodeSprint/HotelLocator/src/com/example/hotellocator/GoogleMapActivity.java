@@ -1,12 +1,10 @@
 package com.example.hotellocator;
 
 //import java.util.List;
-<<<<<<< HEAD
+
 import java.io.IOException;
 import java.util.List;
 
-=======
->>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMapOptions;
@@ -19,7 +17,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-<<<<<<< HEAD
 import android.location.Address;
 import android.location.Location;
 import android.location.LocationListener;
@@ -27,12 +24,10 @@ import android.location.LocationManager;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.Toast;
-=======
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
->>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 
 public class GoogleMapActivity extends Activity {
 
@@ -42,13 +37,10 @@ public class GoogleMapActivity extends Activity {
 	private LocationManager locMan;
 	boolean locChange;
 	Location curLoc, myLoc;
-<<<<<<< HEAD
-	List <Address> address;
+	List<Address> address;
 	LatLng result;
-	
-=======
+	String search;
 
->>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 	GoogleMapOptions option = new GoogleMapOptions();
 	Marker location;
 
@@ -56,40 +48,39 @@ public class GoogleMapActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
-
-		// double[] d = getIntent().getDoubleArrayExtra("co-ordinates");
-		// LatLng LOCATION = new LatLng(d[0],d[1]);
-
-		if (map == null) {
-			map = ((MapFragment) getFragmentManager()
-					.findFragmentById(R.id.map)).getMap();
-			map.setMyLocationEnabled(true);
-			map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-			myLoc = getBestLocation();
-			myPos = new LatLng(myLoc.getLatitude(), myLoc.getLongitude());
-			map.moveCamera(CameraUpdateFactory.newLatLngZoom(myPos, 16));
-			option.zoomControlsEnabled(true);
-		}
-		if (map != null) {
-			location = map.addMarker(new MarkerOptions().position(origin)
-					.title("Delivery")
-					// .snippet("Kiel is cool")
-					.icon(BitmapDescriptorFactory
-							.fromResource(R.drawable.ic_launcher)));
+		myLoc = getBestLocation();
+		try {
+			Bundle b = getIntent().getExtras();
+			if (b != null) {
+				search = b.getString("search");
+				searchMap(search);
+			}
+			}catch(NullPointerException e){
+				e.printStackTrace();
+			}finally {
+			if (map == null) {
+				map = ((MapFragment) getFragmentManager().findFragmentById(
+						R.id.map)).getMap();
+				map.setMyLocationEnabled(true);
+				map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+				myPos = new LatLng(myLoc.getLatitude(), myLoc.getLongitude());
+				map.moveCamera(CameraUpdateFactory.newLatLngZoom(myPos, 16));
+				option.zoomControlsEnabled(true);
+			}
 		}
 		map.setOnMarkerClickListener(new OnMarkerClickListener() {
 			@Override
 			public boolean onMarkerClick(Marker arg0) {
 				// TODO Auto-generated method stub
 				// go to details page
-//				try {
-//					String s = getIntent().getStringExtra("delivery info");
-//					Intent chosenLayout = new Intent(GoogleMapActivity.this,
-//							LoginActivity.class).putExtra("delivery info", s);
-//					startActivity(chosenLayout);
-//				} catch (NullPointerException e) {
-//					e.printStackTrace();
-//				}
+				// try {
+				// String s = getIntent().getStringExtra("delivery info");
+				// Intent chosenLayout = new Intent(GoogleMapActivity.this,
+				// LoginActivity.class).putExtra("delivery info", s);
+				// startActivity(chosenLayout);
+				// } catch (NullPointerException e) {
+				// e.printStackTrace();
+				// }
 				return false;
 			}
 		});
@@ -99,34 +90,28 @@ public class GoogleMapActivity extends Activity {
 		return map;
 	}
 
-<<<<<<< HEAD
-	
-	public void searchMap(String addr){
-	Geocoder coder = new Geocoder(this);
+	public void searchMap(String addr) {
+		Geocoder coder = new Geocoder(this);
 
-	try {
-	    address = coder.getFromLocationName(addr,5);
-	    Address location = address.get(0);
-	    location.getLatitude();
-	    location.getLongitude();
-
-	    result = new LatLng((int) (location.getLatitude() * 1E6),
-	                      (int) (location.getLongitude() * 1E6));
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}finally{
-		if (address != null) {
-			map.addMarker(new MarkerOptions().position(result));
-	    	}
-		else{
-			Toast.makeText(GoogleMapActivity.this,"Location not found", Toast.LENGTH_SHORT);
+		try {
+			address = coder.getFromLocationName(addr, 5);
+			Address location = address.get(0);
+			result = new LatLng((location.getLatitude() * 1E6),
+					(location.getLongitude() * 1E6));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (address != null) {
+				map.addMarker(new MarkerOptions().position(result));
+			} else {
+				Toast.makeText(GoogleMapActivity.this, "Location not found",
+						Toast.LENGTH_SHORT);
+			}
 		}
+
 	}
-	
-}
-=======
->>>>>>> 26085e972714e31cf4af561dc450654225960ea6
+
 	LocationListener gpsListener = new LocationListener() {
 		public void onLocationChanged(Location loc) {
 			if (curLoc == null) {

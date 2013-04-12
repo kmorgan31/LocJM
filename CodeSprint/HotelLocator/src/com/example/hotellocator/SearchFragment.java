@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -30,6 +31,7 @@ public class SearchFragment extends ListFragment {
 	
 	ArrayAdapter<String> listAdapter;
 	ImageButton searchButton;
+	Button aroundMe;
 	EditText query;
 	
 	
@@ -38,6 +40,19 @@ public class SearchFragment extends ListFragment {
 	  	
 	      	View rootView = inflater.inflate(R.layout.activity_searchable, container, false);
 	      	query = (EditText)rootView.findViewById(R.id.searchField);
+	      	aroundMe = (Button)rootView.findViewById(R.id.mapSearchButton);
+	      	aroundMe.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					Bundle b = new Bundle();
+					b.putString("search", query.getText().toString());
+					Intent myIntent = new Intent(getActivity(), GoogleMapActivity.class).putExtras(b);
+					startActivity(myIntent);
+				}
+	      		
+	      	});
 	      	searchButton = (ImageButton)rootView.findViewById(R.id.searchButton);
 	      	searchButton.setOnClickListener(new OnClickListener(){
 

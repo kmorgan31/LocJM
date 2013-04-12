@@ -8,31 +8,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SearchableActivity" >
 
+    <LinearLayout 
+        android:id="@+id/searchArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_weight="30"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
     <EditText
         android:id="@+id/searchField"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/searchButton"
         android:ems="15" >
-
-        <requestFocus />
     </EditText>
-
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="70"
+        android:weightSum="100"
+        android:orientation="horizontal">
     <ImageButton
         android:id="@+id/searchButton"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        android:layout_above="@android:id/list"
-        android:layout_alignTop="@+id/searchField"
-        android:layout_alignParentRight="true"
+        android:layout_weight="60"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
         android:scaleType="fitXY"
         android:src="@drawable/search" />
-
+	<Button
+        android:id="@+id/mapSearchButton"
+        android:layout_weight="40"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:text="Around Me"
+        android:textSize="10sp" />
+	</LinearLayout>
+	</LinearLayout>
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:layout_below="@+id/searchField">
+        android:layout_below="@+id/searchArea">
     </ListView>
+
 
 </RelativeLayout>
