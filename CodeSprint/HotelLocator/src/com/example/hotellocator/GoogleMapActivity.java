@@ -1,6 +1,9 @@
 package com.example.hotellocator;
 
 //import java.util.List;
+import java.io.IOException;
+import java.util.List;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMapOptions;
@@ -13,10 +16,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Address;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.location.Geocoder;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class GoogleMapActivity extends Activity {
 
@@ -26,7 +32,9 @@ public class GoogleMapActivity extends Activity {
 	private LocationManager locMan;
 	boolean locChange;
 	Location curLoc, myLoc;
-
+	List <Address> address;
+	LatLng result;
+	
 	GoogleMapOptions option = new GoogleMapOptions();
 	Marker location;
 
@@ -77,6 +85,31 @@ public class GoogleMapActivity extends Activity {
 		return map;
 	}
 
+	
+	public void searchMap(String addr){
+	Geocoder coder = new Geocoder(this);
+
+	try {
+	    address = coder.getFromLocationName(addr,5);
+	    Address location = address.get(0);
+	    location.getLatitude();
+	    location.getLongitude();
+
+	    result = new LatLng((int) (location.getLatitude() * 1E6),
+	                      (int) (location.getLongitude() * 1E6));
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally{
+		if (address != null) {
+			map.addMarker(new MarkerOptions().position(result));
+	    	}
+		else{
+			Toast.makeText(GoogleMapActivity.this,"Location not found", Toast.LENGTH_SHORT);
+		}
+	}
+	
+}
 	LocationListener gpsListener = new LocationListener() {
 		public void onLocationChanged(Location loc) {
 			if (curLoc == null) {
