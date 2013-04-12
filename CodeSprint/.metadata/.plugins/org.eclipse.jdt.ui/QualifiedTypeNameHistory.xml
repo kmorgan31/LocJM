@@ -2,6 +2,8 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
-<fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
 <fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.widget.RadioButton"/>
+<fullyQualifiedTypeName name="com.example.hotellocator.R.id"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
 </qualifiedTypeNameHistroy>
