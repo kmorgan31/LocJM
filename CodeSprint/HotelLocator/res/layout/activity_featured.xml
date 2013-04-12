@@ -9,13 +9,13 @@
     tools:context=".FeaturedFragment" >
 
     <TextView
-        android:id="@+id/hotelName"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center" 
         android:layout_marginBottom="15dp"
+        android:gravity="center"
         android:textSize="20sp" />
 
     <ImageView
@@ -23,40 +23,40 @@
         android:layout_width="150dp"
         android:layout_height="85dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/hotelName"
+        android:layout_below="@+id/name"
         android:src="@drawable/images" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/desBox1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/imageView1"
-        android:layout_below="@+id/hotelName"
-        android:layout_marginLeft="14dp"
-        android:orientation="vertical" >
+         android:layout_below="@+id/name"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <TextView
-            android:id="@+id/hotelDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"  
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="See More"
-            android:textSize="12sp" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/desBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/desBox2"
+        android:text="See Details"
+        android:textSize="12sp" />
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/button1"
         android:layout_marginTop="20dp" >
-
     </ListView>
 
 </RelativeLayout>

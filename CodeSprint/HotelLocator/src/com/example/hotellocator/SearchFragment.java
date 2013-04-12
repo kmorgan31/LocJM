@@ -32,7 +32,7 @@ public class SearchFragment extends ListFragment {
 	ImageButton searchButton;
 	EditText query;
 	
-
+	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	          Bundle savedInstanceState) {
 	  	
