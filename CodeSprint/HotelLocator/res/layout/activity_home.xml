@@ -47,7 +47,7 @@
             android:id="@+id/hotelButton"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_below="@+id/ImageView01"
+            android:layout_below="@+id/hotelDescription"
             android:text="See More Hotels"
             android:textSize="12sp" />
     </RelativeLayout>

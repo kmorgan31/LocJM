@@ -115,8 +115,11 @@ public class DetailsFragment extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//send LatLng at hotel
+				double coord[] = {hotels[position].getHotelCoordinates().latitude,hotels[position].getHotelCoordinates().longitude};
+				Bundle b = new Bundle();
+				b.putDoubleArray("latlng", coord) ;
 				Intent myIntent = new Intent(DetailsFragment.this,
-						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+						GoogleMapActivity.class).putExtras(b);
 			    startActivity(myIntent);	
 			}
 		});
