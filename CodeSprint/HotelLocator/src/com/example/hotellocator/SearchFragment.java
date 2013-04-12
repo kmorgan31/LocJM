@@ -4,13 +4,18 @@ import java.util.ArrayList;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class SearchFragment extends ListFragment {
@@ -24,12 +29,27 @@ public class SearchFragment extends ListFragment {
     };
 	
 	ArrayAdapter<String> listAdapter;
+	ImageButton searchButton;
+	EditText query;
 	
-
+	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	          Bundle savedInstanceState) {
 	  	
 	      	View rootView = inflater.inflate(R.layout.activity_searchable, container, false);
+	      	query = (EditText)rootView.findViewById(R.id.searchField);
+	      	searchButton = (ImageButton)rootView.findViewById(R.id.searchButton);
+	      	searchButton.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					System.out.println(query.getText().toString());
+					searchHotels(query.getText().toString());
+					
+				}
+	      		
+	      	});
 	      	ArrayList<String> hotelList = new ArrayList<String>();
 			for (int i=0;i<hotels.length;i++){
 				hotelList.add(hotels[i].getHotelName());
@@ -41,5 +61,33 @@ public class SearchFragment extends ListFragment {
 	      	return rootView;
 	}
 	
+<<<<<<< HEAD
 	
+=======
+	protected void searchHotels(String query) {
+		// TODO Auto-generated method stub
+		ArrayList<String> foundHotels = new ArrayList<String>();
+		
+		for (int i=0;i<hotels.length;i++){	
+			if(hotels[i].getHotelName().equals(query)){
+				foundHotels.add(hotels[i].getHotelName());
+			}
+		}
+		
+		Intent myIntent = new Intent();
+		myIntent.setClass(getActivity(), SearchableActivity.class);
+		myIntent.putExtra("hotel names", foundHotels);
+	    startActivity(myIntent);
+	}
+
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id) {
+			 //TODO Auto-generated method stub
+			 //Go to details of hotel
+			Intent myIntent = new Intent();
+			myIntent.setClass(getActivity(), DetailsFragment.class);
+			myIntent.putExtra("hotel name", hotels[position].getHotelName());
+		    startActivity(myIntent);
+		}
+>>>>>>> 6e10efbd5da4c2c3cf33624dd9ac1eb510557308
 }

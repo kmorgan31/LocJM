@@ -2,11 +2,14 @@ package com.example.hotellocator;
 
 import java.util.Locale;
 
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -49,6 +52,17 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     		new Hotel("Grande Palladium", "3 Old Way", "Boring", 1004, new LatLng(18.002856, 45.795659), 2),
     		new Hotel("Riu", "Ocho Rios", "nice food", 1005, new LatLng(14.002856, -7.795659), 4)
     };
+    
+    final Attraction[] attractions = {
+    		new Attraction("Xayamaca", "fun","Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
+    		new Attraction("White River Valley", "boring", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
+    		new Attraction("Veronica Park", "nice food", "Montego Bay", "Mr. Brasco Lee", "Michael Lee Chin", "Allsides District", "Waita Bit P.O.", "Trelawney", new String[]{"538-8940", "468-9449"}, null),
+    		new Attraction("Two Sister's Cave", "scary", "Kingston", "UCD", "Mrs. Winsome Roache", "Hellshire", null, "St. Catherine", null, new String[]{"Arawak Cave"} )
+    };
+//    
+//    final Event[] events = {
+//    		
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +109,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
         // Configure the search info and add any event listeners
         return super.onCreateOptionsMenu(menu);
     }
@@ -132,21 +145,28 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             // below) with the page number as its lone argument.
 
         	Fragment fragment = null;
-        	
         	if(position==0)
-        	{
-        		fragment = new FeaturedFragment();
-        	}
+        		fragment = new HomeFragment();
         	else
         		if(position==1)
         			fragment = new SearchFragment();
-        	else{
-        		fragment = new DummySectionFragment();
-                Bundle args = new Bundle();
-                args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-                fragment.setArguments(args);
-        	}
-        	
+        		else
+        			fragment = new DummySectionFragment();
+	            	Bundle args = new Bundle();
+	            	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+	            	((Fragment) fragment).setArguments(args);
+//        	switch(position){
+//        		case 0: fragment = new HomeFragment();
+//        				break;
+//        		case 1:	fragment = new SearchFragment();
+//        				break;
+//        		case 2: fragment = new GoogleMapFragment();
+//        				break;
+//        		default:fragment = new DummySectionFragment();
+//                	Bundle args = new Bundle();
+//                	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+//                	((Fragment) fragment).setArguments(args);
+ //       	}
         	//            
             return fragment;
         }
@@ -165,7 +185,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                     //return getString(R.string.title_section1).toUpperCase(l);
                     return "Home";
                 case 1:
-                    return "Search";
+                    return "All";
                 case 2:
                 	return "Map";
                 case 3:

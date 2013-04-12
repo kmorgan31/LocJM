@@ -6,6 +6,7 @@ import com.google.android.gms.maps.model.LatLng;
 
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -16,64 +17,91 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class FeaturedFragment extends ListFragment {
+public class FeaturedFragment extends ListActivity {
 
-	TextView description;
-	TextView hotelName;
+	TextView tBox1;
+	TextView name;
+	TextView tBox2;
+	Button seeMore;
+	String list;
+
+	ArrayList<String> featuredList = new ArrayList<String>();
 	ArrayAdapter<String> listAdapter;
-	Hotel[] featuredHotels = {
+	
+	final Hotel[] featuredHotels = {
 			new Hotel("Pegasus", "7 Knutsford Boulevard", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 1000, new LatLng(25.002856, -76.795659), 5),
 	    		new Hotel("Hilton", "7 Hibiscus Drive", "Lorem ipsum", 1001, new LatLng(18.002856, -76.795659), 4),
 	    		new Hotel("Four Seasons", "2A Shalimar Close", "Eureka", 1002, new LatLng(28.002856, -76.795659), 6),
-	    		new Hotel("Holiday Inn", "83 Lore Lane", "Exciting", 1003, new LatLng(18.002856, 76.795659), 3),
 	    		new Hotel("Grande Palladium", "3 Old Way", "Boring", 1004, new LatLng(18.002856, 45.795659), 2),
 	};
-	Button seeMore;
 	
-	public FeaturedFragment(){
-//		Bundle bundle = getArguments().getBundle("hotels");
-//		Parcelable[] parcels = bundle.getParcelableArray("hotels");
-//
-//		Hotel[] hotels = new Hotel[parcels.length];
-//		for (Parcelable par : parcels){
-//		     hotels.add((Hotel) par);              
-//		}
-		
-	}
-	
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-          Bundle savedInstanceState) {
-  	
-      	View rootView = inflater.inflate(R.layout.activity_featured, container, false);
-      	hotelName = (TextView)rootView.findViewById(R.id.hotelName);
-		hotelName.setText(featuredHotels[0].getHotelName());
-		description = (TextView)rootView.findViewById(R.id.hotelDescription);
-		description.setText(featuredHotels[0].getDescription());
-		ArrayList<String> hotelList = new ArrayList<String>();
-		for (int i=1;i<featuredHotels.length;i++){
-			hotelList.add(featuredHotels[i].getHotelName());
-		}
-		listAdapter = new ArrayAdapter<String>(getActivity(),
-		        android.R.layout.simple_list_item_1, hotelList);
-		
-		setListAdapter(listAdapter);
-		
-		seeMore = (Button)rootView.findViewById(R.id.button1);
-		seeMore.setOnClickListener(new OnClickListener(){
+	final Attraction[] featuredAttractions = {
+    		new Attraction("Xayamaca", "fun", "Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
+    		new Attraction("White River Valley", "boring", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
+    		new Attraction("Veronica Park", "nice food", "Montego Bay", "Mr. Brasco Lee", "Michael Lee Chin", "Allsides District", "Waita Bit P.O.", "Trelawney", new String[]{"538-8940", "468-9449"}, null),
+    };
 
+	
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_featured);
+      	
+		name = (TextView)findViewById(R.id.name);
+      	tBox1 = (TextView)findViewById(R.id.desBox1);
+      	tBox2 = (TextView)findViewById(R.id.desBox2);
+      	
+      	list = getIntent().getStringExtra("list");
+      	
+      	if(list.equals("hotel")){	
+			name.setText(featuredHotels[0].getHotelName());
+			tBox1.setText(featuredHotels[0].getDescription());
+			tBox2.setVisibility(View.INVISIBLE);
+			
+			for (int i=1;i<featuredHotels.length;i++){
+				featuredList.add(featuredHotels[i].getHotelName());
+			}
+      	}
+      	else{
+      		if(list.equals("attraction"))
+      		{
+      			name.setText(featuredAttractions[0].getName());
+    			tBox1.setText(featuredAttractions[0].getDescription());
+    			String s = "";
+    			for(int i=0;i<featuredAttractions[0].getThemes().length;i++)
+    			{
+    				s = s + featuredAttractions[0].getThemes()[0] + "\n";
+    			}
+    			tBox2.setText(s);
+    			
+    			for (int i=1;i<featuredAttractions.length;i++){
+    				featuredList.add(featuredAttractions[i].getName());
+    			}
+      		}
+      	}
+			
+			listAdapter = new ArrayAdapter<String>(this,
+			        android.R.layout.simple_list_item_1, featuredList);
+			
+			setListAdapter(listAdapter);
+		
+		seeMore = (Button)findViewById(R.id.button1);
+		seeMore.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent();
-				myIntent.setClass(getActivity(), DetailsFragment.class);
-				myIntent.putExtra("hotel name", featuredHotels[0].getHotelName());
+				myIntent.setClass(FeaturedFragment.this, DetailsFragment.class);
+				if(list.equals("hotel"))
+					myIntent.putExtra("hotel", featuredHotels[0].getHotelName());
+				else
+					if(list.equals("hotel"))
+						myIntent.putExtra("attraction", featuredAttractions[0].getName());
 			    startActivity(myIntent);
 			}
 			
 		});
-		
-		return rootView;
 	}
 		
 		@Override
@@ -81,11 +109,13 @@ public class FeaturedFragment extends ListFragment {
 				 //TODO Auto-generated method stub
 				 //Go to details of hotel
 				Intent myIntent = new Intent();
-//				Bundle b = new Bundle();
-//				b.putSerializable("Hotels", (Serializable[]) hotels);
-				myIntent.setClass(getActivity(), DetailsFragment.class);
-				//myIntent.putExtra("hotels", hotels);
-				myIntent.putExtra("hotel name", featuredHotels[position+1].getHotelName());
+				myIntent.setClass(this, DetailsFragment.class);
+				if(list.equals("hotel"))
+					myIntent.putExtra("hotel", featuredHotels[position+1].getHotelName());
+				else
+					if(list.equals("attraction"))
+						myIntent.putExtra("attraction", featuredAttractions[position+1].getName());
+				
 			    startActivity(myIntent);
 			}
 	}

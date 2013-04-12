@@ -12,5 +12,7 @@
     <string name="title_activity_details_fragment">DetailsFragment</string>
     <string name="menu_search">Search</string>
     <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_home">HomeActivity</string>
 
 </resources>

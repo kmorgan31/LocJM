@@ -16,12 +16,15 @@ import android.widget.Toast;
 
 public class DetailsFragment extends Activity {
 
-	TextView hotelName;
-	TextView hotelDescription;
-	TextView hotelAddress;
-	TextView hotelRating;
+	String name;
+	TextView featureName;
+	TextView description;
+	TextView address;
+	TextView themes;
+	TextView rating;
 	Button mapButton;
 	RatingBar rbar;
+	int position = -1;
 	
 	final Hotel[] hotels = {
 			new Hotel("Pegasus", "7 Knutsford Boulevard", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 1000, new LatLng(25.002856, -76.795659), 5),
@@ -32,45 +35,88 @@ public class DetailsFragment extends Activity {
     		new Hotel("Riu", "Ocho Rios", "nice food", 1005, new LatLng(14.002856, -7.795659), 4)
     };
 	
+	final Attraction[] attractions = {
+    		new Attraction("Xayamaca", "fun","Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
+    		new Attraction("White River Valley", "boring", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
+    		new Attraction("Veronica Park", "nice food", "Montego Bay", "Mr. Brasco Lee", "Michael Lee Chin", "Allsides District", "Waita Bit P.O.", "Trelawney", new String[]{"538-8940", "468-9449"}, null),
+    		new Attraction("Two Sister's Cave", "scary", "Kingston", "UCD", "Mrs. Winsome Roache", "Hellshire", null, "St. Catherine", null, new String[]{"Arawak Cave"} )
+    };
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_details);
 		
-		//Hotel h = new Hotel("Hilton", "7 Hibiscus Drive", "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 10001);
-//		Bundle hotelBundle = getIntent().getExtras();
-//		Hotel[] hotels = (Hotel[]) hotelBundle.getSerializable("Hotels");
 		
-		
-		int position = 0;
-		final String name = getIntent().getStringExtra("hotel name");
-		for(int i=0;i<hotels.length;i++)
-		{
-			if(hotels[i].getHotelName().equals(name))
+		name = getIntent().getStringExtra("hotel");
+		if(name!=null){
+			for(int i=0;i<hotels.length;i++)
 			{
-				position=i;
-				break;
+				if(hotels[i].getHotelName().equals(name))
+				{
+					position=i;
+					break;
+				}
 			}
 		}
+		else{
+			for(int i=0;i<attractions.length;i++)
+			{
+				if(attractions[i].getName().equals(name))
+				{
+					position=i;
+					break;
+				}
+			}
+		}
+		
 		if(position>-1)
 		{
-			hotelName = (TextView)findViewById(R.id.hotelName);
-			hotelDescription = (TextView)findViewById(R.id.hotelDescription);
-			hotelAddress = (TextView)findViewById(R.id.hotelAddress);
-			hotelRating = (TextView)findViewById(R.id.hotelRating);
+			featureName = (TextView)findViewById(R.id.name);
+			description = (TextView)findViewById(R.id.hotelDescription);
+			address = (TextView)findViewById(R.id.hotelAddress);
+			rating = (TextView)findViewById(R.id.hotelRating);
 			rbar = (RatingBar) findViewById(R.id.ratingBar1);
+			themes = (TextView)findViewById(R.id.themes);
 			
-			hotelName.setText(hotels[position].getHotelName());
-			hotelDescription.setText(hotels[position].getDescription());
-			hotelAddress.setText(hotels[position].getAddress());
-			hotelRating.setText(Integer.toString(hotels[position].getHotelRating()) + "stars");
-			rbar.setRating(hotels[position].getAverageUserRating());
+			if(name.equals("hotel"))
+			{
+				featureName.setText(hotels[position].getHotelName());
+				description.setText(hotels[position].getDescription());
+				address.setText(hotels[position].getAddress());
+				rating.setText(Integer.toString(hotels[position].getHotelRating()) + " stars");
+				rbar.setRating(hotels[position].getAverageUserRating());
+			}
+			else
+			{
+				featureName.setText(attractions[position].getName());
+				description.setText(attractions[position].getDescription());
+				address.setText(attractions[position].getAddress());
+				String s = "";
+    			for(int i=0;i<attractions[position].getThemes().length;i++)
+    			{
+    				s = s + attractions[position].getThemes()[0] + "\n";
+    			}
+    			themes.setText(s);
+				rbar.setRating(0);
+			}
 			
 			mapButton = (Button)findViewById(R.id.button1);
 			addListenerOnRatingBar(position);
 			
 			//rbar initially user rating
 			
+		mapButton = (Button)findViewById(R.id.mapButton);
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+			    startActivity(myIntent);	
+			}
+		});
 //		mapButton.setOnClickListener(new OnClickListener(){
 //
 //
