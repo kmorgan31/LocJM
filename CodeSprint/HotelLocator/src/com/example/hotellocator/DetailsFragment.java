@@ -135,15 +135,49 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+//		mapButton.setOnClickListener(new OnClickListener(){
+//			@Override
+//			public void onClick(View arg0) {
+//				// TODO Auto-generated method stub
+//				//send LatLng at hotel
+//				Intent myIntent = new Intent(DetailsFragment.this,
+//						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+//			    startActivity(myIntent);	
+//			}
+//		});
+=======
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtra("latlng", hotels[position].getHotelCoordinates());
+			    startActivity(myIntent);	
+			}
+		});
+>>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
+		
+>>>>>>> a6b2d82cd57533ebf69ddb0df7964a0c22be1794
 		callButton.setOnClickListener(new OnClickListener(){
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//send LatLng at hotel
+				if(type.equals("hotel")){
+					Toast.makeText(DetailsFragment.this,
+							"No contact number",
+								Toast.LENGTH_SHORT).show();
+				}
+				else{
 				Intent callIntent = new Intent(Intent.ACTION_CALL);
 				callIntent.setData(Uri.parse("tel:"+attractions[position].getContact()[0])); 
 				startActivity(callIntent);
+				}
 				
 			}
 			

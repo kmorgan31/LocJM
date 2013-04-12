@@ -97,9 +97,6 @@ public class Favourites extends Fragment {
 				else{
 					if(childPosition==1 && type.equals("attraction") ){
 					int position = -1;
-					Toast.makeText(getActivity(),
-							name,
-								Toast.LENGTH_SHORT).show();
 					for(int i=0;i<favouriteAttractions.length;i++)
 					{
 						if(favouriteAttractions[i].getName().equals(name))

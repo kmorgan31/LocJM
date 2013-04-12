@@ -87,8 +87,8 @@ public class SearchFragment extends ListFragment {
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
-					Toast.makeText(getActivity(),
-							rButton.getText(), Toast.LENGTH_SHORT).show();
+//					Toast.makeText(getActivity(),
+//							rButton.getText(), Toast.LENGTH_SHORT).show();
 					searchHotels(query.getText().toString());
 					
 				}

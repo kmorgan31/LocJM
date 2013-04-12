@@ -31,15 +31,19 @@
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+<<<<<<< HEAD
+    
+=======
 
 
+>>>>>>> 1840488261e4d86313a4e47a6b3738eb8640353c
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Light.NoTitleBar" >
         <meta-data
