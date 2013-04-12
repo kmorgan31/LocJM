@@ -98,8 +98,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
 
         // Configure the search info and add any event listeners
         return super.onCreateOptionsMenu(menu);
