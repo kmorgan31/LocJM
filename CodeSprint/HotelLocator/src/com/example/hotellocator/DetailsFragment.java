@@ -122,7 +122,6 @@ public class DetailsFragment extends Activity {
 			//rbar initially user rating
 			
 		mapButton = (Button)findViewById(R.id.mapButton);
-<<<<<<< HEAD
 		mapButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -136,8 +135,6 @@ public class DetailsFragment extends Activity {
 			    startActivity(myIntent);	
 			}
 		});
-=======
->>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
 //		mapButton.setOnClickListener(new OnClickListener(){
 //			@Override
 //			public void onClick(View arg0) {
@@ -155,9 +152,16 @@ public class DetailsFragment extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//send LatLng at hotel
+				if(type.equals("hotel")){
+					Toast.makeText(DetailsFragment.this,
+							"No contact number",
+								Toast.LENGTH_SHORT).show();
+				}
+				else{
 				Intent callIntent = new Intent(Intent.ACTION_CALL);
 				callIntent.setData(Uri.parse("tel:"+attractions[position].getContact()[0])); 
 				startActivity(callIntent);
+				}
 				
 			}
 			

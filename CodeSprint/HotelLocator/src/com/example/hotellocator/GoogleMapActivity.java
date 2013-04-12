@@ -1,10 +1,9 @@
-//package com.example.hotellocator;
+package com.example.hotellocator;
 //
 ////import java.util.List;
 //
 //import java.io.IOException;
 //import java.util.List;
-<<<<<<< HEAD
 
 import java.io.IOException;
 import java.util.List;
@@ -202,7 +201,7 @@ public class GoogleMapActivity extends Activity {
 		finish();
 	}
 }
-=======
+
 //
 //import com.google.android.gms.maps.GoogleMap;
 //import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
@@ -391,4 +390,3 @@ public class GoogleMapActivity extends Activity {
 //		finish();
 //	}
 //}
->>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a

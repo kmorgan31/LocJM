@@ -60,15 +60,6 @@ public class SearchableActivity extends ListActivity {
 			        android.R.layout.simple_list_item_1, found);
 			
 			setListAdapter(listAdapter);
-
-//		Intent myIntent = new Intent();
-//		myIntent.setClass(this, SearchFragment.class);
-//		startActivity(myIntent);
-	    
-//		listAdapter = new ArrayAdapter<String>(this,
-//		        android.R.layout.simple_list_item_1, foundHotels);
-//		
-//		setListAdapter(listAdapter);
 	}
 	
 	@Override
