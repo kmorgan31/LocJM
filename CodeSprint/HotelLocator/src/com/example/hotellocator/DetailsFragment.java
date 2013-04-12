@@ -122,6 +122,22 @@ public class DetailsFragment extends Activity {
 			//rbar initially user rating
 			
 		mapButton = (Button)findViewById(R.id.mapButton);
+<<<<<<< HEAD
+		mapButton.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//send LatLng at hotel
+				double coord[] = {hotels[position].getHotelCoordinates().latitude,hotels[position].getHotelCoordinates().longitude};
+				Bundle b = new Bundle();
+				b.putDoubleArray("latlng", coord) ;
+				Intent myIntent = new Intent(DetailsFragment.this,
+						GoogleMapActivity.class).putExtras(b);
+			    startActivity(myIntent);	
+			}
+		});
+=======
+>>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
 //		mapButton.setOnClickListener(new OnClickListener(){
 //			@Override
 //			public void onClick(View arg0) {
