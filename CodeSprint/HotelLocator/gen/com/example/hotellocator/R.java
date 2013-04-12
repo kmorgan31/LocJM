@@ -147,10 +147,9 @@ containing a value of this type.
         public static final int search=0x7f020005;
     }
     public static final class id {
-<<<<<<< HEAD
         public static final int ImageView01=0x7f040016;
         public static final int SlideMap=0x7f04000f;
-        public static final int action_settings=0x7f040026;
+        public static final int action_settings=0x7f040029;
         public static final int attractionButton=0x7f04001d;
         public static final int attractionDescription=0x7f04001c;
         public static final int attractionName=0x7f040019;
@@ -160,62 +159,7 @@ containing a value of this type.
         public static final int desBox1=0x7f040011;
         public static final int desBox2=0x7f040012;
         public static final int favoriteList=0x7f04000e;
-=======
-<<<<<<< HEAD
-        public static final int ImageView01=0x7f040015;
-        public static final int SlideMap=0x7f04000e;
-        public static final int action_settings=0x7f040028;
-        public static final int attractionButton=0x7f04001c;
-        public static final int attractionDescription=0x7f04001b;
-        public static final int attractionName=0x7f040018;
-        public static final int attractionThemes=0x7f04001a;
-        public static final int button1=0x7f040012;
-        public static final int contactButton=0x7f04000d;
-        public static final int desBox1=0x7f040010;
-        public static final int desBox2=0x7f040011;
-        public static final int filters=0x7f040023;
-        public static final int hotelAddress=0x7f040008;
-        public static final int hotelButton=0x7f040016;
-        public static final int hotelDescription=0x7f040009;
-        public static final int hotelName=0x7f040014;
-        public static final int hotelRating=0x7f040007;
-        public static final int hybrid=0x7f040004;
-        public static final int imageView1=0x7f040006;
-        public static final int imageView2=0x7f040019;
-        public static final int layout1=0x7f040013;
-        public static final int layout2=0x7f040017;
-        public static final int map=0x7f04001f;
-        public static final int mapButton=0x7f04000c;
-        public static final int mapSearchButton=0x7f040026;
-        public static final int name=0x7f040005;
-        public static final int nearMe=0x7f04001d;
-        public static final int none=0x7f040000;
-        public static final int normal=0x7f040001;
-        public static final int pager=0x7f04001e;
-        public static final int radioButton1=0x7f040024;
-        public static final int radioButton2=0x7f040025;
-        public static final int ratingBar1=0x7f04000b;
-        public static final int satellite=0x7f040002;
-        public static final int searchArea=0x7f040020;
-        public static final int searchButton=0x7f040022;
-        public static final int searchField=0x7f040021;
-        public static final int tabListView=0x7f04000f;
-        public static final int terrain=0x7f040003;
-        public static final int textView1=0x7f040027;
-        public static final int themes=0x7f04000a;
-=======
-<<<<<<< HEAD
-        public static final int ImageView01=0x7f040013;
-        public static final int action_settings=0x7f040023;
-        public static final int attractionButton=0x7f04001a;
-        public static final int attractionDescription=0x7f040019;
-        public static final int attractionName=0x7f040016;
-        public static final int attractionThemes=0x7f040018;
-        public static final int button1=0x7f040010;
-        public static final int desBox1=0x7f04000e;
-        public static final int desBox2=0x7f04000f;
-        public static final int favoriteList=0x7f04000d;
->>>>>>> a57de24a4b3f6a6f089993ecbf6cec604c0c9a26
+        public static final int filters=0x7f040024;
         public static final int hotelAddress=0x7f040008;
         public static final int hotelButton=0x7f040017;
         public static final int hotelDescription=0x7f040009;
@@ -228,12 +172,14 @@ containing a value of this type.
         public static final int layout2=0x7f040018;
         public static final int map=0x7f040020;
         public static final int mapButton=0x7f04000c;
-        public static final int mapSearchButton=0x7f040024;
+        public static final int mapSearchButton=0x7f040027;
         public static final int name=0x7f040005;
         public static final int nearMe=0x7f04001e;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f04001f;
+        public static final int radioButton1=0x7f040025;
+        public static final int radioButton2=0x7f040026;
         public static final int ratingBar1=0x7f04000b;
         public static final int satellite=0x7f040002;
         public static final int searchArea=0x7f040021;
@@ -241,13 +187,12 @@ containing a value of this type.
         public static final int searchField=0x7f040022;
         public static final int tabListView=0x7f040010;
         public static final int terrain=0x7f040003;
-        public static final int textView1=0x7f040025;
+        public static final int textView1=0x7f040028;
         public static final int themes=0x7f04000a;
     }
     public static final class layout {
         public static final int activity_details=0x7f030000;
         public static final int activity_favorite=0x7f030001;
-<<<<<<< HEAD
         public static final int activity_favourites=0x7f030002;
         public static final int activity_featured=0x7f030003;
         public static final int activity_home=0x7f030004;
@@ -256,55 +201,6 @@ containing a value of this type.
         public static final int activity_searchable=0x7f030007;
         public static final int activity_searchable_results=0x7f030008;
         public static final int fragment_main_dummy=0x7f030009;
-=======
-=======
-        public static final int ImageView01=0x7f080010;
-        public static final int SlideMap=0x7f080009;
-        public static final int action_settings=0x7f080020;
-        public static final int attractionButton=0x7f080017;
-        public static final int attractionDescription=0x7f080016;
-        public static final int attractionName=0x7f080013;
-        public static final int attractionThemes=0x7f080015;
-        public static final int button1=0x7f08000d;
-        public static final int contactButton=0x7f080008;
-        public static final int desBox1=0x7f08000b;
-        public static final int desBox2=0x7f08000c;
-        public static final int hotelAddress=0x7f080003;
-        public static final int hotelButton=0x7f080011;
-        public static final int hotelDescription=0x7f080004;
-        public static final int hotelName=0x7f08000f;
-        public static final int hotelRating=0x7f080002;
-        public static final int imageView1=0x7f080001;
-        public static final int imageView2=0x7f080014;
-        public static final int layout1=0x7f08000e;
-        public static final int layout2=0x7f080012;
-        public static final int map=0x7f08001a;
-        public static final int mapButton=0x7f080007;
-        public static final int mapSearchButton=0x7f08001e;
-        public static final int name=0x7f080000;
-        public static final int nearMe=0x7f080018;
-        public static final int pager=0x7f080019;
-        public static final int ratingBar1=0x7f080006;
-        public static final int searchArea=0x7f08001b;
-        public static final int searchButton=0x7f08001d;
-        public static final int searchField=0x7f08001c;
-        public static final int tabListView=0x7f08000a;
-        public static final int textView1=0x7f08001f;
-        public static final int themes=0x7f080005;
->>>>>>> 61cb6c985e1717e24302aecaceeec1205ddf0ce3
-    }
-    public static final class layout {
-        public static final int activity_details=0x7f030000;
-        public static final int activity_favourites=0x7f030001;
->>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
-        public static final int activity_featured=0x7f030002;
-        public static final int activity_home=0x7f030003;
-        public static final int activity_main=0x7f030004;
-        public static final int activity_map=0x7f030005;
-        public static final int activity_searchable=0x7f030006;
-        public static final int activity_searchable_results=0x7f030007;
-        public static final int fragment_main_dummy=0x7f030008;
->>>>>>> a57de24a4b3f6a6f089993ecbf6cec604c0c9a26
     }
     public static final class menu {
         public static final int details=0x7f080000;

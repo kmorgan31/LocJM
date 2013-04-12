@@ -1,21 +1,7 @@
 INDEX VERSION 1.126+C:\Users\Randy\Desktop\Code Sprint\CodeSprint\CodeSprint\.metadata\.plugins\org.eclipse.jdt.core
 797091720.index
-2600302796.index
+2002087127.index
 974523006.index
 1593829757.index
 848856923.index
-<<<<<<< HEAD
-=======
 2930373361.index
-=======
-INDEX VERSION 1.126+C:\CodeSprint\CodeSprint\.metadata\.plugins\org.eclipse.jdt.core
-2915876991.index
-2283964481.index
-848856923.index
-797091720.index
-<<<<<<< HEAD
-1726837370.index
-=======
->>>>>>> dfa38640f0b48072b2e1cac7210a33a55d52e27a
->>>>>>> 61cb6c985e1717e24302aecaceeec1205ddf0ce3
->>>>>>> a57de24a4b3f6a6f089993ecbf6cec604c0c9a26
