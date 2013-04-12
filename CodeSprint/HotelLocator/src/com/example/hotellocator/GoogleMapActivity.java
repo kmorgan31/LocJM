@@ -1,9 +1,12 @@
 package com.example.hotellocator;
 
 //import java.util.List;
+<<<<<<< HEAD
 import java.io.IOException;
 import java.util.List;
 
+=======
+>>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMapOptions;
@@ -16,6 +19,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.location.Address;
 import android.location.Location;
 import android.location.LocationListener;
@@ -23,6 +27,12 @@ import android.location.LocationManager;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.Toast;
+=======
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+>>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 
 public class GoogleMapActivity extends Activity {
 
@@ -32,9 +42,13 @@ public class GoogleMapActivity extends Activity {
 	private LocationManager locMan;
 	boolean locChange;
 	Location curLoc, myLoc;
+<<<<<<< HEAD
 	List <Address> address;
 	LatLng result;
 	
+=======
+
+>>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 	GoogleMapOptions option = new GoogleMapOptions();
 	Marker location;
 
@@ -85,6 +99,7 @@ public class GoogleMapActivity extends Activity {
 		return map;
 	}
 
+<<<<<<< HEAD
 	
 	public void searchMap(String addr){
 	Geocoder coder = new Geocoder(this);
@@ -110,6 +125,8 @@ public class GoogleMapActivity extends Activity {
 	}
 	
 }
+=======
+>>>>>>> 26085e972714e31cf4af561dc450654225960ea6
 	LocationListener gpsListener = new LocationListener() {
 		public void onLocationChanged(Location loc) {
 			if (curLoc == null) {

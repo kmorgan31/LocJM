@@ -3,20 +3,22 @@ package com.example.hotellocator;
 public class Attraction {
 
 	private String name;
+	private String description;
 	private String region;
 	private String owner;
 	private String manager;
 	private String address;
 	private String city;
 	private String parish;
-	private String contact;
-	private String theme;
+	private String[] contact;
+	private String[] theme;
 	
-	public Attraction(String name, String region, String owner, String manager,
-			String address, String city, String parish, String contact,
-			String theme) {
+	public Attraction(String name, String description, String region, String owner, String manager,
+			String address, String city, String parish, String[] contact,
+			String[] theme) {
 		super();
 		this.name = name;
+		this.description = description;
 		this.region = region;
 		this.owner = owner;
 		this.manager = manager;
@@ -33,6 +35,14 @@ public class Attraction {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getRegion() {
@@ -83,19 +93,19 @@ public class Attraction {
 		this.parish = parish;
 	}
 
-	public String getContact() {
+	public String[] getContact() {
 		return contact;
 	}
 
-	public void setContact(String contact) {
+	public void setContact(String[] contact) {
 		this.contact = contact;
 	}
 
-	public String getTheme() {
+	public String[] getThemes() {
 		return theme;
 	}
 
-	public void setTheme(String theme) {
+	public void setThemes(String[] theme) {
 		this.theme = theme;
 	}
 	

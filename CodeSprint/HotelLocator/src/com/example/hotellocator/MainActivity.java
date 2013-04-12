@@ -53,10 +53,12 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     		new Hotel("Riu", "Ocho Rios", "nice food", 1005, new LatLng(14.002856, -7.795659), 4)
     };
     
-//    final Attraction[] attraction = {
-//    		new Attraction("Montego Bay", "Xayamaca", "Mr. Paul Hastings", "Dalton Hastings" ),
-//    		new Attraction("Montego Bay", )
-//    };
+    final Attraction[] attractions = {
+    		new Attraction("Xayamaca", "fun","Montego Bay", "Mr. Paul Hastings", "Dalton Hastings", "Howard Cooke Blvd, Freeport", "Montego Bay", "St. James", new String[]{"844-9935"}, new String[]{"Plant Centre", "Complex Grounds", "Gift Shop", "Juice Bar"}),
+    		new Attraction("White River Valley", "boring", "Ocho Rios", "Daniel Melville", "Vaneka McKenzie", "Cascade", "Endevour", "St. Mary", new String[]{"974-2018","382-6907"}, new String[]{"River Tubing", "Horseback Riding", "Kayaking"} ),
+    		new Attraction("Veronica Park", "nice food", "Montego Bay", "Mr. Brasco Lee", "Michael Lee Chin", "Allsides District", "Waita Bit P.O.", "Trelawney", new String[]{"538-8940", "468-9449"}, null),
+    		new Attraction("Two Sister's Cave", "scary", "Kingston", "UCD", "Mrs. Winsome Roache", "Hellshire", null, "St. Catherine", null, new String[]{"Arawak Cave"} )
+    };
 //    
 //    final Event[] events = {
 //    		
@@ -143,18 +145,28 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             // below) with the page number as its lone argument.
 
         	Fragment fragment = null;
-        	switch(position){
-        		case 0: fragment = new FeaturedFragment();
-        				break;
-        		case 1:	fragment = new SearchFragment();
-        				break;
-        		case 2: fragment = new GoogleMapFragment();
-        				break;
-        		default:fragment = new DummySectionFragment();
-                	Bundle args = new Bundle();
-                	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-                	((Fragment) fragment).setArguments(args);
-        	}
+        	if(position==0)
+        		fragment = new HomeFragment();
+        	else
+        		if(position==1)
+        			fragment = new SearchFragment();
+        		else
+        			fragment = new DummySectionFragment();
+	            	Bundle args = new Bundle();
+	            	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+	            	((Fragment) fragment).setArguments(args);
+//        	switch(position){
+//        		case 0: fragment = new HomeFragment();
+//        				break;
+//        		case 1:	fragment = new SearchFragment();
+//        				break;
+//        		case 2: fragment = new GoogleMapFragment();
+//        				break;
+//        		default:fragment = new DummySectionFragment();
+//                	Bundle args = new Bundle();
+//                	args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+//                	((Fragment) fragment).setArguments(args);
+ //       	}
         	//            
             return fragment;
         }

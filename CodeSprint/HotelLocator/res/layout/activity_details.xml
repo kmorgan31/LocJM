@@ -8,10 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DetailsFragment" >
     
-    
-
+   
     <TextView
-        android:id="@+id/hotelName"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView1"
@@ -26,7 +25,6 @@
         android:layout_alignParentRight="true"
         android:textSize ="12sp"
         android:textColor="#CCC"
-        android:text="Rating"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ImageView 
@@ -41,7 +39,7 @@
         android:id="@+id/hotelAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hotelName"
+        android:layout_below="@+id/name"
         android:layout_marginTop="20dp"
         android:textSize = "15sp"
         android:text="Medium Text"
@@ -57,6 +55,15 @@
         android:maxLength="140"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/themes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotelDescription"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/mapButton"
